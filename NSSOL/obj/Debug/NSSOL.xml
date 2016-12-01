@@ -32,6 +32,16 @@ NSSOL
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:NSSOL.My.Resources.Resources.close">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:NSSOL.My.Resources.Resources.deault">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:NSSOL.My.Resources.Resources.delete_icon">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -47,7 +57,17 @@ NSSOL
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:NSSOL.My.Resources.Resources.minimize">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:NSSOL.My.Resources.Resources.new_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:NSSOL.My.Resources.Resources.restore">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

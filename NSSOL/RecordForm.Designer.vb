@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class RecordForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,29 +20,13 @@ Partial Class RecordForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RecordForm))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
-        Me.TSBtn_Logoff = New System.Windows.Forms.ToolStripButton()
-        Me.TSBtn_Add = New System.Windows.Forms.ToolStripButton()
-        Me.TSBtn_Save = New System.Windows.Forms.ToolStripButton()
-        Me.TSBtn_Delete = New System.Windows.Forms.ToolStripButton()
-        Me.TSBtn_Cancel = New System.Windows.Forms.ToolStripButton()
-        Me.TSBtn_First = New System.Windows.Forms.ToolStripButton()
-        Me.TSBtn_Previous = New System.Windows.Forms.ToolStripButton()
-        Me.TSBtn_Next = New System.Windows.Forms.ToolStripButton()
-        Me.TSBtn_Last = New System.Windows.Forms.ToolStripButton()
         Me.MasterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NothingThereToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PortfolioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -65,25 +49,51 @@ Partial Class RecordForm
         Me.NothingThereToolStripMenuItem9 = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NothingThereToolStripMenuItem10 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmi_Close = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmi_Restore = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmi_Minimise = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.TSBtn_Logoff = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.TSBtn_Add = New System.Windows.Forms.ToolStripButton()
+        Me.TSBtn_Save = New System.Windows.Forms.ToolStripButton()
+        Me.TSBtn_Delete = New System.Windows.Forms.ToolStripButton()
+        Me.TSBtn_Cancel = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.TSBtn_First = New System.Windows.Forms.ToolStripButton()
+        Me.TSBtn_Previous = New System.Windows.Forms.ToolStripButton()
+        Me.TSBtn_Next = New System.Windows.Forms.ToolStripButton()
+        Me.TSBtn_Last = New System.Windows.Forms.ToolStripButton()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.MasterToolStripMenuItem, Me.PortfolioToolStripMenuItem, Me.MoneyMarketToolStripMenuItem, Me.DerivativesToolStripMenuItem, Me.AccountingToolStripMenuItem, Me.ReportToolStripMenuItem, Me.AuditToolStripMenuItem, Me.ExportToolStripMenuItem, Me.SettingToolStripMenuItem, Me.WindowsToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.AllowMerge = False
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.FileToolStripMenuItem, Me.MasterToolStripMenuItem, Me.PortfolioToolStripMenuItem, Me.MoneyMarketToolStripMenuItem, Me.DerivativesToolStripMenuItem, Me.AccountingToolStripMenuItem, Me.ReportToolStripMenuItem, Me.AuditToolStripMenuItem, Me.ExportToolStripMenuItem, Me.SettingToolStripMenuItem, Me.WindowsToolStripMenuItem, Me.HelpToolStripMenuItem, Me.tsmi_Close, Me.tsmi_Restore, Me.tsmi_Minimise})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(837, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(963, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Image = Global.NSSOL.My.Resources.Resources.deault
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(28, 20)
         '
         'FileToolStripMenuItem
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.ShortcutKeyDisplayString = "F"
-        Me.FileToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F), System.Windows.Forms.Keys)
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "&File"
         '
@@ -92,8 +102,174 @@ Partial Class RecordForm
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
         Me.CloseToolStripMenuItem.ShortcutKeyDisplayString = ""
         Me.CloseToolStripMenuItem.ShowShortcutKeys = False
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(96, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
+        '
+        'MasterToolStripMenuItem
+        '
+        Me.MasterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem})
+        Me.MasterToolStripMenuItem.Name = "MasterToolStripMenuItem"
+        Me.MasterToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
+        Me.MasterToolStripMenuItem.Text = "Master"
+        '
+        'NothingThereToolStripMenuItem
+        '
+        Me.NothingThereToolStripMenuItem.Name = "NothingThereToolStripMenuItem"
+        Me.NothingThereToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.NothingThereToolStripMenuItem.Text = "Nothing there."
+        '
+        'PortfolioToolStripMenuItem
+        '
+        Me.PortfolioToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem1})
+        Me.PortfolioToolStripMenuItem.Name = "PortfolioToolStripMenuItem"
+        Me.PortfolioToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
+        Me.PortfolioToolStripMenuItem.Text = "Portfolio"
+        '
+        'NothingThereToolStripMenuItem1
+        '
+        Me.NothingThereToolStripMenuItem1.Name = "NothingThereToolStripMenuItem1"
+        Me.NothingThereToolStripMenuItem1.Size = New System.Drawing.Size(151, 22)
+        Me.NothingThereToolStripMenuItem1.Text = "Nothing there."
+        '
+        'MoneyMarketToolStripMenuItem
+        '
+        Me.MoneyMarketToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem2})
+        Me.MoneyMarketToolStripMenuItem.Name = "MoneyMarketToolStripMenuItem"
+        Me.MoneyMarketToolStripMenuItem.Size = New System.Drawing.Size(96, 20)
+        Me.MoneyMarketToolStripMenuItem.Text = "Money Market"
+        '
+        'NothingThereToolStripMenuItem2
+        '
+        Me.NothingThereToolStripMenuItem2.Name = "NothingThereToolStripMenuItem2"
+        Me.NothingThereToolStripMenuItem2.Size = New System.Drawing.Size(151, 22)
+        Me.NothingThereToolStripMenuItem2.Text = "Nothing there."
+        '
+        'DerivativesToolStripMenuItem
+        '
+        Me.DerivativesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem3})
+        Me.DerivativesToolStripMenuItem.Name = "DerivativesToolStripMenuItem"
+        Me.DerivativesToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
+        Me.DerivativesToolStripMenuItem.Text = "Derivatives"
+        '
+        'NothingThereToolStripMenuItem3
+        '
+        Me.NothingThereToolStripMenuItem3.Name = "NothingThereToolStripMenuItem3"
+        Me.NothingThereToolStripMenuItem3.Size = New System.Drawing.Size(151, 22)
+        Me.NothingThereToolStripMenuItem3.Text = "Nothing there."
+        '
+        'AccountingToolStripMenuItem
+        '
+        Me.AccountingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem4})
+        Me.AccountingToolStripMenuItem.Name = "AccountingToolStripMenuItem"
+        Me.AccountingToolStripMenuItem.Size = New System.Drawing.Size(81, 20)
+        Me.AccountingToolStripMenuItem.Text = "Accounting"
+        '
+        'NothingThereToolStripMenuItem4
+        '
+        Me.NothingThereToolStripMenuItem4.Name = "NothingThereToolStripMenuItem4"
+        Me.NothingThereToolStripMenuItem4.Size = New System.Drawing.Size(151, 22)
+        Me.NothingThereToolStripMenuItem4.Text = "Nothing there."
+        '
+        'ReportToolStripMenuItem
+        '
+        Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem5})
+        Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
+        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
+        Me.ReportToolStripMenuItem.Text = "Report"
+        '
+        'NothingThereToolStripMenuItem5
+        '
+        Me.NothingThereToolStripMenuItem5.Name = "NothingThereToolStripMenuItem5"
+        Me.NothingThereToolStripMenuItem5.Size = New System.Drawing.Size(151, 22)
+        Me.NothingThereToolStripMenuItem5.Text = "Nothing there."
+        '
+        'AuditToolStripMenuItem
+        '
+        Me.AuditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem6})
+        Me.AuditToolStripMenuItem.Name = "AuditToolStripMenuItem"
+        Me.AuditToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
+        Me.AuditToolStripMenuItem.Text = "Audit"
+        '
+        'NothingThereToolStripMenuItem6
+        '
+        Me.NothingThereToolStripMenuItem6.Name = "NothingThereToolStripMenuItem6"
+        Me.NothingThereToolStripMenuItem6.Size = New System.Drawing.Size(151, 22)
+        Me.NothingThereToolStripMenuItem6.Text = "Nothing there."
+        '
+        'ExportToolStripMenuItem
+        '
+        Me.ExportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem7})
+        Me.ExportToolStripMenuItem.Name = "ExportToolStripMenuItem"
+        Me.ExportToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
+        Me.ExportToolStripMenuItem.Text = "Export"
+        '
+        'NothingThereToolStripMenuItem7
+        '
+        Me.NothingThereToolStripMenuItem7.Name = "NothingThereToolStripMenuItem7"
+        Me.NothingThereToolStripMenuItem7.Size = New System.Drawing.Size(151, 22)
+        Me.NothingThereToolStripMenuItem7.Text = "Nothing there."
+        '
+        'SettingToolStripMenuItem
+        '
+        Me.SettingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem8})
+        Me.SettingToolStripMenuItem.Name = "SettingToolStripMenuItem"
+        Me.SettingToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
+        Me.SettingToolStripMenuItem.Text = "Setting"
+        '
+        'NothingThereToolStripMenuItem8
+        '
+        Me.NothingThereToolStripMenuItem8.Name = "NothingThereToolStripMenuItem8"
+        Me.NothingThereToolStripMenuItem8.Size = New System.Drawing.Size(151, 22)
+        Me.NothingThereToolStripMenuItem8.Text = "Nothing there."
+        '
+        'WindowsToolStripMenuItem
+        '
+        Me.WindowsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem9})
+        Me.WindowsToolStripMenuItem.Name = "WindowsToolStripMenuItem"
+        Me.WindowsToolStripMenuItem.ShortcutKeyDisplayString = "W"
+        Me.WindowsToolStripMenuItem.Size = New System.Drawing.Size(68, 20)
+        Me.WindowsToolStripMenuItem.Text = "&Windows"
+        '
+        'NothingThereToolStripMenuItem9
+        '
+        Me.NothingThereToolStripMenuItem9.Name = "NothingThereToolStripMenuItem9"
+        Me.NothingThereToolStripMenuItem9.Size = New System.Drawing.Size(151, 22)
+        Me.NothingThereToolStripMenuItem9.Text = "Nothing there."
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem10})
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.ShortcutKeyDisplayString = "H"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "&Help"
+        '
+        'NothingThereToolStripMenuItem10
+        '
+        Me.NothingThereToolStripMenuItem10.Name = "NothingThereToolStripMenuItem10"
+        Me.NothingThereToolStripMenuItem10.Size = New System.Drawing.Size(151, 22)
+        Me.NothingThereToolStripMenuItem10.Text = "Nothing there."
+        '
+        'tsmi_Close
+        '
+        Me.tsmi_Close.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.tsmi_Close.Image = Global.NSSOL.My.Resources.Resources.close
+        Me.tsmi_Close.Name = "tsmi_Close"
+        Me.tsmi_Close.Size = New System.Drawing.Size(28, 20)
+        '
+        'tsmi_Restore
+        '
+        Me.tsmi_Restore.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.tsmi_Restore.Image = Global.NSSOL.My.Resources.Resources.restore
+        Me.tsmi_Restore.Name = "tsmi_Restore"
+        Me.tsmi_Restore.Size = New System.Drawing.Size(28, 20)
+        '
+        'tsmi_Minimise
+        '
+        Me.tsmi_Minimise.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.tsmi_Minimise.Image = Global.NSSOL.My.Resources.Resources.minimize
+        Me.tsmi_Minimise.Name = "tsmi_Minimise"
+        Me.tsmi_Minimise.Size = New System.Drawing.Size(28, 20)
         '
         'ToolStrip1
         '
@@ -102,43 +278,9 @@ Partial Class RecordForm
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSBtn_Logoff, Me.ToolStripSeparator1, Me.TSBtn_Add, Me.TSBtn_Save, Me.TSBtn_Delete, Me.TSBtn_Cancel, Me.ToolStripSeparator2, Me.ToolStripLabel1, Me.ToolStripSeparator3, Me.ToolStripSeparator4, Me.ToolStripLabel2, Me.TSBtn_First, Me.TSBtn_Previous, Me.TSBtn_Next, Me.TSBtn_Last})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(837, 48)
+        Me.ToolStrip1.Size = New System.Drawing.Size(963, 48)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 48)
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 48)
-        '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(75, 45)
-        Me.ToolStripLabel1.Text = "Duplicate"
-        '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 48)
-        '
-        'ToolStripSeparator4
-        '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 48)
-        '
-        'ToolStripLabel2
-        '
-        Me.ToolStripLabel2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(132, 45)
-        Me.ToolStripLabel2.Text = "Record Navigator"
         '
         'TSBtn_Logoff
         '
@@ -149,6 +291,11 @@ Partial Class RecordForm
         Me.TSBtn_Logoff.Name = "TSBtn_Logoff"
         Me.TSBtn_Logoff.Size = New System.Drawing.Size(106, 45)
         Me.TSBtn_Logoff.Text = "Log Off"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 48)
         '
         'TSBtn_Add
         '
@@ -189,6 +336,35 @@ Partial Class RecordForm
         Me.TSBtn_Cancel.Name = "TSBtn_Cancel"
         Me.TSBtn_Cancel.Size = New System.Drawing.Size(100, 45)
         Me.TSBtn_Cancel.Text = "Cancel"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 48)
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(75, 45)
+        Me.ToolStripLabel1.Text = "Duplicate"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 48)
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 48)
+        '
+        'ToolStripLabel2
+        '
+        Me.ToolStripLabel2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel2.Name = "ToolStripLabel2"
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(132, 45)
+        Me.ToolStripLabel2.Text = "Record Navigator"
         '
         'TSBtn_First
         '
@@ -234,158 +410,16 @@ Partial Class RecordForm
         Me.TSBtn_Last.Text = "Last"
         Me.TSBtn_Last.ToolTipText = "Last"
         '
-        'MasterToolStripMenuItem
-        '
-        Me.MasterToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem})
-        Me.MasterToolStripMenuItem.Name = "MasterToolStripMenuItem"
-        Me.MasterToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
-        Me.MasterToolStripMenuItem.Text = "Master"
-        '
-        'NothingThereToolStripMenuItem
-        '
-        Me.NothingThereToolStripMenuItem.Name = "NothingThereToolStripMenuItem"
-        Me.NothingThereToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.NothingThereToolStripMenuItem.Text = "Nothing there."
-        '
-        'PortfolioToolStripMenuItem
-        '
-        Me.PortfolioToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem1})
-        Me.PortfolioToolStripMenuItem.Name = "PortfolioToolStripMenuItem"
-        Me.PortfolioToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
-        Me.PortfolioToolStripMenuItem.Text = "Portfolio"
-        '
-        'NothingThereToolStripMenuItem1
-        '
-        Me.NothingThereToolStripMenuItem1.Name = "NothingThereToolStripMenuItem1"
-        Me.NothingThereToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.NothingThereToolStripMenuItem1.Text = "Nothing there."
-        '
-        'MoneyMarketToolStripMenuItem
-        '
-        Me.MoneyMarketToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem2})
-        Me.MoneyMarketToolStripMenuItem.Name = "MoneyMarketToolStripMenuItem"
-        Me.MoneyMarketToolStripMenuItem.Size = New System.Drawing.Size(96, 20)
-        Me.MoneyMarketToolStripMenuItem.Text = "Money Market"
-        '
-        'NothingThereToolStripMenuItem2
-        '
-        Me.NothingThereToolStripMenuItem2.Name = "NothingThereToolStripMenuItem2"
-        Me.NothingThereToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
-        Me.NothingThereToolStripMenuItem2.Text = "Nothing there."
-        '
-        'DerivativesToolStripMenuItem
-        '
-        Me.DerivativesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem3})
-        Me.DerivativesToolStripMenuItem.Name = "DerivativesToolStripMenuItem"
-        Me.DerivativesToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
-        Me.DerivativesToolStripMenuItem.Text = "Derivatives"
-        '
-        'NothingThereToolStripMenuItem3
-        '
-        Me.NothingThereToolStripMenuItem3.Name = "NothingThereToolStripMenuItem3"
-        Me.NothingThereToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
-        Me.NothingThereToolStripMenuItem3.Text = "Nothing there."
-        '
-        'AccountingToolStripMenuItem
-        '
-        Me.AccountingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem4})
-        Me.AccountingToolStripMenuItem.Name = "AccountingToolStripMenuItem"
-        Me.AccountingToolStripMenuItem.Size = New System.Drawing.Size(81, 20)
-        Me.AccountingToolStripMenuItem.Text = "Accounting"
-        '
-        'NothingThereToolStripMenuItem4
-        '
-        Me.NothingThereToolStripMenuItem4.Name = "NothingThereToolStripMenuItem4"
-        Me.NothingThereToolStripMenuItem4.Size = New System.Drawing.Size(152, 22)
-        Me.NothingThereToolStripMenuItem4.Text = "Nothing there."
-        '
-        'ReportToolStripMenuItem
-        '
-        Me.ReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem5})
-        Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
-        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
-        Me.ReportToolStripMenuItem.Text = "Report"
-        '
-        'NothingThereToolStripMenuItem5
-        '
-        Me.NothingThereToolStripMenuItem5.Name = "NothingThereToolStripMenuItem5"
-        Me.NothingThereToolStripMenuItem5.Size = New System.Drawing.Size(152, 22)
-        Me.NothingThereToolStripMenuItem5.Text = "Nothing there."
-        '
-        'AuditToolStripMenuItem
-        '
-        Me.AuditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem6})
-        Me.AuditToolStripMenuItem.Name = "AuditToolStripMenuItem"
-        Me.AuditToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
-        Me.AuditToolStripMenuItem.Text = "Audit"
-        '
-        'NothingThereToolStripMenuItem6
-        '
-        Me.NothingThereToolStripMenuItem6.Name = "NothingThereToolStripMenuItem6"
-        Me.NothingThereToolStripMenuItem6.Size = New System.Drawing.Size(152, 22)
-        Me.NothingThereToolStripMenuItem6.Text = "Nothing there."
-        '
-        'ExportToolStripMenuItem
-        '
-        Me.ExportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem7})
-        Me.ExportToolStripMenuItem.Name = "ExportToolStripMenuItem"
-        Me.ExportToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
-        Me.ExportToolStripMenuItem.Text = "Export"
-        '
-        'NothingThereToolStripMenuItem7
-        '
-        Me.NothingThereToolStripMenuItem7.Name = "NothingThereToolStripMenuItem7"
-        Me.NothingThereToolStripMenuItem7.Size = New System.Drawing.Size(152, 22)
-        Me.NothingThereToolStripMenuItem7.Text = "Nothing there."
-        '
-        'SettingToolStripMenuItem
-        '
-        Me.SettingToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem8})
-        Me.SettingToolStripMenuItem.Name = "SettingToolStripMenuItem"
-        Me.SettingToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
-        Me.SettingToolStripMenuItem.Text = "Setting"
-        '
-        'NothingThereToolStripMenuItem8
-        '
-        Me.NothingThereToolStripMenuItem8.Name = "NothingThereToolStripMenuItem8"
-        Me.NothingThereToolStripMenuItem8.Size = New System.Drawing.Size(152, 22)
-        Me.NothingThereToolStripMenuItem8.Text = "Nothing there."
-        '
-        'WindowsToolStripMenuItem
-        '
-        Me.WindowsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem9})
-        Me.WindowsToolStripMenuItem.Name = "WindowsToolStripMenuItem"
-        Me.WindowsToolStripMenuItem.ShortcutKeyDisplayString = "W"
-        Me.WindowsToolStripMenuItem.Size = New System.Drawing.Size(68, 20)
-        Me.WindowsToolStripMenuItem.Text = "&Windows"
-        '
-        'NothingThereToolStripMenuItem9
-        '
-        Me.NothingThereToolStripMenuItem9.Name = "NothingThereToolStripMenuItem9"
-        Me.NothingThereToolStripMenuItem9.Size = New System.Drawing.Size(152, 22)
-        Me.NothingThereToolStripMenuItem9.Text = "Nothing there."
-        '
-        'HelpToolStripMenuItem
-        '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NothingThereToolStripMenuItem10})
-        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.ShortcutKeyDisplayString = "H"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.HelpToolStripMenuItem.Text = "&Help"
-        '
-        'NothingThereToolStripMenuItem10
-        '
-        Me.NothingThereToolStripMenuItem10.Name = "NothingThereToolStripMenuItem10"
-        Me.NothingThereToolStripMenuItem10.Size = New System.Drawing.Size(152, 22)
-        Me.NothingThereToolStripMenuItem10.Text = "Nothing there."
-        '
         'RecordForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(837, 447)
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.ClientSize = New System.Drawing.Size(963, 447)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "RecordForm"
         Me.Text = "RecordFrom"
@@ -440,4 +474,8 @@ Partial Class RecordForm
     Friend WithEvents NothingThereToolStripMenuItem9 As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NothingThereToolStripMenuItem10 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents tsmi_Close As ToolStripMenuItem
+    Friend WithEvents tsmi_Restore As ToolStripMenuItem
+    Friend WithEvents tsmi_Minimise As ToolStripMenuItem
 End Class

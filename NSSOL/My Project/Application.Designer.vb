@@ -32,7 +32,7 @@ Namespace My
 
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()> _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.NSSOL.RecordForm
+            Me.MainForm = Global.NSSOL.MainForm
         End Sub
     End Class
 End Namespace
