@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="nssolModelStoreContainer" CdmEntityContainer="nssolEntities">
+    <EntitySetMapping Name="nssols">
+      <EntityTypeMapping TypeName="nssolModel.nssol">
+        <MappingFragment StoreEntitySet="nssol">
+          <ScalarProperty Name="Petty_Cash_Limit" ColumnName="Petty Cash Limit" />
+          <ScalarProperty Name="Petty_Cash_Account_Code" ColumnName="Petty Cash Account Code" />
+          <ScalarProperty Name="Gain_Loss_A_C" ColumnName="Gain/Loss A/C" />
+          <ScalarProperty Name="Retained_Earnings_A_C" ColumnName="Retained Earnings A/C" />
+          <ScalarProperty Name="Post" ColumnName="Post" />
+          <ScalarProperty Name="Approve" ColumnName="Approve" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="Tax_Currency__Code" ColumnName="Tax Currency  Code" />
+          <ScalarProperty Name="Domestic_Currency_Code" ColumnName="Domestic Currency Code" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Authorized_Signer_3" ColumnName="Authorized Signer 3" />
+          <ScalarProperty Name="Authorized_Signer_2" ColumnName="Authorized Signer 2" />
+          <ScalarProperty Name="Authorized_Signer_1" ColumnName="Authorized Signer 1" />
+          <ScalarProperty Name="Tax_Registration_No" ColumnName="Tax Registration No" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Company_Reg__No" ColumnName="Company Reg. No" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company Name" />
+          <ScalarProperty Name="Company_Code" ColumnName="Company Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

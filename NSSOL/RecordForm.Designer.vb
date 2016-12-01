@@ -26,7 +26,7 @@ Partial Class RecordForm
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MasterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NothingThereToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PortfolioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -69,8 +69,13 @@ Partial Class RecordForm
         Me.TSBtn_Next = New System.Windows.Forms.ToolStripButton()
         Me.TSBtn_Last = New System.Windows.Forms.ToolStripButton()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.tssl_User_Name = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.tssl_Version = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.tssl_Databse = New System.Windows.Forms.ToolStripStatusLabel()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -91,19 +96,19 @@ Partial Class RecordForm
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.ShortcutKeyDisplayString = "F"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "&File"
         '
-        'CloseToolStripMenuItem
+        'ExitToolStripMenuItem
         '
-        Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.ShortcutKeyDisplayString = ""
-        Me.CloseToolStripMenuItem.ShowShortcutKeys = False
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(96, 22)
-        Me.CloseToolStripMenuItem.Text = "Close"
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.ShortcutKeyDisplayString = ""
+        Me.ExitToolStripMenuItem.ShowShortcutKeys = False
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(85, 22)
+        Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'MasterToolStripMenuItem
         '
@@ -410,12 +415,58 @@ Partial Class RecordForm
         Me.TSBtn_Last.Text = "Last"
         Me.TSBtn_Last.ToolTipText = "Last"
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tssl_User_Name, Me.tssl_Version, Me.tssl_Databse})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 423)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(963, 24)
+        Me.StatusStrip1.TabIndex = 2
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'tssl_User_Name
+        '
+        Me.tssl_User_Name.AutoSize = False
+        Me.tssl_User_Name.BorderSides = CType((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) _
+            Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) _
+            Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom), System.Windows.Forms.ToolStripStatusLabelBorderSides)
+        Me.tssl_User_Name.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenInner
+        Me.tssl_User_Name.Name = "tssl_User_Name"
+        Me.tssl_User_Name.Size = New System.Drawing.Size(200, 19)
+        Me.tssl_User_Name.Text = "User Name:"
+        Me.tssl_User_Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'tssl_Version
+        '
+        Me.tssl_Version.AutoSize = False
+        Me.tssl_Version.BorderSides = CType((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) _
+            Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) _
+            Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom), System.Windows.Forms.ToolStripStatusLabelBorderSides)
+        Me.tssl_Version.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenInner
+        Me.tssl_Version.Name = "tssl_Version"
+        Me.tssl_Version.Size = New System.Drawing.Size(160, 19)
+        Me.tssl_Version.Text = "Version:"
+        Me.tssl_Version.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'tssl_Databse
+        '
+        Me.tssl_Databse.AutoSize = False
+        Me.tssl_Databse.BorderSides = CType((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) _
+            Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) _
+            Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom), System.Windows.Forms.ToolStripStatusLabelBorderSides)
+        Me.tssl_Databse.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenInner
+        Me.tssl_Databse.Name = "tssl_Databse"
+        Me.tssl_Databse.Size = New System.Drawing.Size(200, 19)
+        Me.tssl_Databse.Text = "Database:"
+        Me.tssl_Databse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'RecordForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(963, 447)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.DoubleBuffered = True
@@ -427,6 +478,8 @@ Partial Class RecordForm
         Me.MenuStrip1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -434,7 +487,7 @@ Partial Class RecordForm
 
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CloseToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents TSBtn_Logoff As ToolStripButton
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
@@ -478,4 +531,8 @@ Partial Class RecordForm
     Friend WithEvents tsmi_Close As ToolStripMenuItem
     Friend WithEvents tsmi_Restore As ToolStripMenuItem
     Friend WithEvents tsmi_Minimise As ToolStripMenuItem
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents tssl_User_Name As ToolStripStatusLabel
+    Friend WithEvents tssl_Version As ToolStripStatusLabel
+    Friend WithEvents tssl_Databse As ToolStripStatusLabel
 End Class

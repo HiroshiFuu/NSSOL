@@ -19,3 +19,6 @@ C:\Users\FENG0\Google Drive\NSSOL\NSSOL\bin\Debug\Resources\backward.png
 C:\Users\FENG0\Google Drive\NSSOL\NSSOL\bin\Debug\Resources\forward.png
 C:\Users\FENG0\Google Drive\NSSOL\NSSOL\bin\Debug\Resources\skipforward.png
 C:\Users\FENG0\Google Drive\NSSOL\NSSOL\obj\Debug\NSSOL.vbprojResolveAssemblyReference.cache
+C:\Users\FENG0\Google Drive\NSSOL\NSSOL\bin\Debug\EntityFramework.dll
+C:\Users\FENG0\Google Drive\NSSOL\NSSOL\bin\Debug\EntityFramework.xml
+C:\Users\FENG0\Google Drive\NSSOL\NSSOL\bin\Debug\SystemConfig.config
