@@ -10,23 +10,27 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class nssol
+Partial Public Class CompanyInfo
     Public Property Company_Code As String
     Public Property Company_Name As String
-    Public Property Address As String
-    Public Property Company_Reg__No As String
+    Public Property Address_Line_1 As String
+    Public Property Address_Line_2 As String
+    Public Property Address_Line_3 As String
+    Public Property Company_Reg_No As String
     Public Property Country As String
     Public Property Tel As String
     Public Property Fax As String
     Public Property Email As String
     Public Property Website As String
     Public Property Tax_Registration_No As String
-    Public Property Authorized_Signer_1 As String
-    Public Property Authorized_Signer_2 As String
-    Public Property Authorized_Signer_3 As String
-    Public Property Title As String
+    Public Property Authorized_Signer_Name_1 As String
+    Public Property Authorized_Signer_Name_2 As String
+    Public Property Authorized_Signer_Name_3 As String
+    Public Property Authorized_Signer_Title_1 As String
+    Public Property Authorized_Signer_Title_2 As String
+    Public Property Authorized_Signer_Title_3 As String
     Public Property Domestic_Currency_Code As String
-    Public Property Tax_Currency__Code As String
+    Public Property Tax_Currency_Code As String
     Public Property Period As Nullable(Of Date)
     Public Property Status As String
     Public Property Approve As String
@@ -35,5 +39,9 @@ Partial Public Class nssol
     Public Property Gain_Loss_A_C As String
     Public Property Petty_Cash_Account_Code As String
     Public Property Petty_Cash_Limit As Nullable(Of Decimal)
+    Public Property CreatedBy As String
+    Public Property CreatedOn As Nullable(Of Date)
+    Public Property UpdatedBy As String
+    Public Property UpdatedOn As Nullable(Of Date)
 
 End Class

@@ -5,27 +5,6 @@ Public Class SystemConfig
 
     Private Shared config As SystemConfig = Nothing
 
-    '  Private Company_Code As String
-    '  Private Company_Name varchar(255),
-    'Private Address_Line_1 varchar(255) Default NULL,
-    'Private Address_Line_2 varchar(255),
-    'Private Address_Line_3 varchar(50) Default NULL,
-    'Private Company_Reg_No varchar(11) Default NULL,
-    'Private Country varchar(255) Default NULL,
-    'Private Tel varchar(100) Default NULL,
-    'Private Fax varchar(100) Default NULL,
-    'Private Email varchar(255) Default NULL,
-    'Private Website TEXT Default NULL,
-    'Private Tax_Registration_No varchar(13) Default NULL,
-    'Private Authorized_Signer_1 varchar(255) Default NULL,
-    'Private Authorized_Signer_2 varchar(255) Default NULL,
-    'Private Authorized_Signer_3 varchar(255) Default NULL,
-    'Private Title_1 varchar(255) Default NULL,
-    'Private Title_2 varchar(255) Default NULL,
-    'Private Title_3 varchar(255) Default NULL,
-    'Private Domestic_Currency_Code varchar(255) Default NULL,
-    'Private Tax_Currency_Code varchar(255) Default NULL,
-
     Private Property User_Name As String
     Private Property Version As String
     Private Property Database As String

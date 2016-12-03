@@ -22,6 +22,6 @@ Partial Public Class nssolEntities
         Throw New UnintentionalCodeFirstException()
     End Sub
 
-    Public Property nssols() As DbSet(Of nssol)
+    Public Property CompanyInfos() As DbSet(Of CompanyInfo)
 
 End Class

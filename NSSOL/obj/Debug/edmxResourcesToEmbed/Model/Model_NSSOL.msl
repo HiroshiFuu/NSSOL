@@ -1,9 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="nssolModelStoreContainer" CdmEntityContainer="nssolEntities">
-    <EntitySetMapping Name="nssols">
-      <EntityTypeMapping TypeName="nssolModel.nssol">
-        <MappingFragment StoreEntitySet="nssol">
+    <EntitySetMapping Name="CompanyInfos">
+      <EntityTypeMapping TypeName="nssolModel.CompanyInfo">
+        <MappingFragment StoreEntitySet="companyinfo">
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
           <ScalarProperty Name="Petty_Cash_Limit" ColumnName="Petty Cash Limit" />
           <ScalarProperty Name="Petty_Cash_Account_Code" ColumnName="Petty Cash Account Code" />
           <ScalarProperty Name="Gain_Loss_A_C" ColumnName="Gain/Loss A/C" />
@@ -12,20 +16,24 @@
           <ScalarProperty Name="Approve" ColumnName="Approve" />
           <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="Period" ColumnName="Period" />
-          <ScalarProperty Name="Tax_Currency__Code" ColumnName="Tax Currency  Code" />
+          <ScalarProperty Name="Tax_Currency_Code" ColumnName="Tax Currency Code" />
           <ScalarProperty Name="Domestic_Currency_Code" ColumnName="Domestic Currency Code" />
-          <ScalarProperty Name="Title" ColumnName="Title" />
-          <ScalarProperty Name="Authorized_Signer_3" ColumnName="Authorized Signer 3" />
-          <ScalarProperty Name="Authorized_Signer_2" ColumnName="Authorized Signer 2" />
-          <ScalarProperty Name="Authorized_Signer_1" ColumnName="Authorized Signer 1" />
+          <ScalarProperty Name="Authorized_Signer_Title_3" ColumnName="Authorized Signer Title 3" />
+          <ScalarProperty Name="Authorized_Signer_Title_2" ColumnName="Authorized Signer Title 2" />
+          <ScalarProperty Name="Authorized_Signer_Title_1" ColumnName="Authorized Signer Title 1" />
+          <ScalarProperty Name="Authorized_Signer_Name_3" ColumnName="Authorized Signer Name 3" />
+          <ScalarProperty Name="Authorized_Signer_Name_2" ColumnName="Authorized Signer Name 2" />
+          <ScalarProperty Name="Authorized_Signer_Name_1" ColumnName="Authorized Signer Name 1" />
           <ScalarProperty Name="Tax_Registration_No" ColumnName="Tax Registration No" />
           <ScalarProperty Name="Website" ColumnName="Website" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Fax" ColumnName="Fax" />
           <ScalarProperty Name="Tel" ColumnName="Tel" />
           <ScalarProperty Name="Country" ColumnName="Country" />
-          <ScalarProperty Name="Company_Reg__No" ColumnName="Company Reg. No" />
-          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Company_Reg_No" ColumnName="Company Reg No" />
+          <ScalarProperty Name="Address_Line_3" ColumnName="Address Line 3" />
+          <ScalarProperty Name="Address_Line_2" ColumnName="Address Line 2" />
+          <ScalarProperty Name="Address_Line_1" ColumnName="Address Line 1" />
           <ScalarProperty Name="Company_Name" ColumnName="Company Name" />
           <ScalarProperty Name="Company_Code" ColumnName="Company Code" />
         </MappingFragment>

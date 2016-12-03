@@ -26,7 +26,9 @@ Partial Class RecordForm
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Load1stRecordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MasterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NothingThereToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PortfolioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -73,9 +75,53 @@ Partial Class RecordForm
         Me.tssl_User_Name = New System.Windows.Forms.ToolStripStatusLabel()
         Me.tssl_Version = New System.Windows.Forms.ToolStripStatusLabel()
         Me.tssl_Databse = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.gbCompanyInfo = New System.Windows.Forms.GroupBox()
+        Me.tbTaxRegNo = New System.Windows.Forms.TextBox()
+        Me.tbWebsite = New System.Windows.Forms.TextBox()
+        Me.tbEmail = New System.Windows.Forms.TextBox()
+        Me.tbFax = New System.Windows.Forms.TextBox()
+        Me.tbTel = New System.Windows.Forms.TextBox()
+        Me.tbCountryName = New System.Windows.Forms.TextBox()
+        Me.btnCountry = New System.Windows.Forms.Button()
+        Me.tbCountryCode = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.tbTitle3 = New System.Windows.Forms.TextBox()
+        Me.tbTitle2 = New System.Windows.Forms.TextBox()
+        Me.tbTitle1 = New System.Windows.Forms.TextBox()
+        Me.tbAddress3 = New System.Windows.Forms.TextBox()
+        Me.tbName3 = New System.Windows.Forms.TextBox()
+        Me.tbName2 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.tbName1 = New System.Windows.Forms.TextBox()
+        Me.tbCompanyRegNo = New System.Windows.Forms.TextBox()
+        Me.tbAddress2 = New System.Windows.Forms.TextBox()
+        Me.tbAddress1 = New System.Windows.Forms.TextBox()
+        Me.tbCompanyName = New System.Windows.Forms.TextBox()
+        Me.tbCompanyCode = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.tbCreatedBy = New System.Windows.Forms.TextBox()
+        Me.tbCreatedOn = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.tbUpdatedOn = New System.Windows.Forms.TextBox()
+        Me.tbUpdatedBy = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
+        Me.gbCompanyInfo.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -84,7 +130,7 @@ Partial Class RecordForm
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.FileToolStripMenuItem, Me.MasterToolStripMenuItem, Me.PortfolioToolStripMenuItem, Me.MoneyMarketToolStripMenuItem, Me.DerivativesToolStripMenuItem, Me.AccountingToolStripMenuItem, Me.ReportToolStripMenuItem, Me.AuditToolStripMenuItem, Me.ExportToolStripMenuItem, Me.SettingToolStripMenuItem, Me.WindowsToolStripMenuItem, Me.HelpToolStripMenuItem, Me.tsmi_Close, Me.tsmi_Restore, Me.tsmi_Minimise})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(963, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(936, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -96,19 +142,31 @@ Partial Class RecordForm
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.ExitToolStripMenuItem, Me.Load1stRecordToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.ShortcutKeyDisplayString = "F"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "&File"
+        '
+        'NewToolStripMenuItem
+        '
+        Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
+        Me.NewToolStripMenuItem.Text = "&New"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeyDisplayString = ""
         Me.ExitToolStripMenuItem.ShowShortcutKeys = False
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(85, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
+        '
+        'Load1stRecordToolStripMenuItem
+        '
+        Me.Load1stRecordToolStripMenuItem.Name = "Load1stRecordToolStripMenuItem"
+        Me.Load1stRecordToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
+        Me.Load1stRecordToolStripMenuItem.Text = "&Load 1st Record"
         '
         'MasterToolStripMenuItem
         '
@@ -279,11 +337,11 @@ Partial Class RecordForm
         'ToolStrip1
         '
         Me.ToolStrip1.AutoSize = False
-        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.Window
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSBtn_Logoff, Me.ToolStripSeparator1, Me.TSBtn_Add, Me.TSBtn_Save, Me.TSBtn_Delete, Me.TSBtn_Cancel, Me.ToolStripSeparator2, Me.ToolStripLabel1, Me.ToolStripSeparator3, Me.ToolStripSeparator4, Me.ToolStripLabel2, Me.TSBtn_First, Me.TSBtn_Previous, Me.TSBtn_Next, Me.TSBtn_Last})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(963, 48)
+        Me.ToolStrip1.Size = New System.Drawing.Size(936, 48)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -314,6 +372,7 @@ Partial Class RecordForm
         '
         'TSBtn_Save
         '
+        Me.TSBtn_Save.Enabled = False
         Me.TSBtn_Save.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TSBtn_Save.Image = CType(resources.GetObject("TSBtn_Save.Image"), System.Drawing.Image)
         Me.TSBtn_Save.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
@@ -324,6 +383,7 @@ Partial Class RecordForm
         '
         'TSBtn_Delete
         '
+        Me.TSBtn_Delete.Enabled = False
         Me.TSBtn_Delete.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TSBtn_Delete.Image = CType(resources.GetObject("TSBtn_Delete.Image"), System.Drawing.Image)
         Me.TSBtn_Delete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
@@ -334,6 +394,7 @@ Partial Class RecordForm
         '
         'TSBtn_Cancel
         '
+        Me.TSBtn_Cancel.Enabled = False
         Me.TSBtn_Cancel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TSBtn_Cancel.Image = CType(resources.GetObject("TSBtn_Cancel.Image"), System.Drawing.Image)
         Me.TSBtn_Cancel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
@@ -374,6 +435,7 @@ Partial Class RecordForm
         'TSBtn_First
         '
         Me.TSBtn_First.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.TSBtn_First.Enabled = False
         Me.TSBtn_First.Image = Global.NSSOL.My.Resources.Resources.skipbackward
         Me.TSBtn_First.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.TSBtn_First.ImageTransparentColor = System.Drawing.Color.Magenta
@@ -385,6 +447,7 @@ Partial Class RecordForm
         'TSBtn_Previous
         '
         Me.TSBtn_Previous.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.TSBtn_Previous.Enabled = False
         Me.TSBtn_Previous.Image = Global.NSSOL.My.Resources.Resources.backward
         Me.TSBtn_Previous.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.TSBtn_Previous.ImageTransparentColor = System.Drawing.Color.Magenta
@@ -396,6 +459,7 @@ Partial Class RecordForm
         'TSBtn_Next
         '
         Me.TSBtn_Next.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.TSBtn_Next.Enabled = False
         Me.TSBtn_Next.Image = Global.NSSOL.My.Resources.Resources.forward
         Me.TSBtn_Next.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.TSBtn_Next.ImageTransparentColor = System.Drawing.Color.Magenta
@@ -407,6 +471,7 @@ Partial Class RecordForm
         'TSBtn_Last
         '
         Me.TSBtn_Last.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.TSBtn_Last.Enabled = False
         Me.TSBtn_Last.Image = Global.NSSOL.My.Resources.Resources.skipforward
         Me.TSBtn_Last.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.TSBtn_Last.ImageTransparentColor = System.Drawing.Color.Magenta
@@ -418,15 +483,16 @@ Partial Class RecordForm
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tssl_User_Name, Me.tssl_Version, Me.tssl_Databse})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 423)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 671)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(963, 24)
+        Me.StatusStrip1.Size = New System.Drawing.Size(936, 24)
         Me.StatusStrip1.TabIndex = 2
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'tssl_User_Name
         '
         Me.tssl_User_Name.AutoSize = False
+        Me.tssl_User_Name.BackColor = System.Drawing.SystemColors.Control
         Me.tssl_User_Name.BorderSides = CType((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) _
             Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) _
             Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom), System.Windows.Forms.ToolStripStatusLabelBorderSides)
@@ -439,6 +505,7 @@ Partial Class RecordForm
         'tssl_Version
         '
         Me.tssl_Version.AutoSize = False
+        Me.tssl_Version.BackColor = System.Drawing.SystemColors.Control
         Me.tssl_Version.BorderSides = CType((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) _
             Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) _
             Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom), System.Windows.Forms.ToolStripStatusLabelBorderSides)
@@ -451,6 +518,7 @@ Partial Class RecordForm
         'tssl_Databse
         '
         Me.tssl_Databse.AutoSize = False
+        Me.tssl_Databse.BackColor = System.Drawing.SystemColors.Control
         Me.tssl_Databse.BorderSides = CType((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) _
             Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) _
             Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom), System.Windows.Forms.ToolStripStatusLabelBorderSides)
@@ -460,12 +528,425 @@ Partial Class RecordForm
         Me.tssl_Databse.Text = "Database:"
         Me.tssl_Databse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'gbCompanyInfo
+        '
+        Me.gbCompanyInfo.AutoSize = True
+        Me.gbCompanyInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.gbCompanyInfo.BackColor = System.Drawing.SystemColors.Window
+        Me.gbCompanyInfo.Controls.Add(Me.tbTaxRegNo)
+        Me.gbCompanyInfo.Controls.Add(Me.tbWebsite)
+        Me.gbCompanyInfo.Controls.Add(Me.tbEmail)
+        Me.gbCompanyInfo.Controls.Add(Me.tbFax)
+        Me.gbCompanyInfo.Controls.Add(Me.tbTel)
+        Me.gbCompanyInfo.Controls.Add(Me.tbCountryName)
+        Me.gbCompanyInfo.Controls.Add(Me.btnCountry)
+        Me.gbCompanyInfo.Controls.Add(Me.tbCountryCode)
+        Me.gbCompanyInfo.Controls.Add(Me.Label14)
+        Me.gbCompanyInfo.Controls.Add(Me.Label13)
+        Me.gbCompanyInfo.Controls.Add(Me.Label12)
+        Me.gbCompanyInfo.Controls.Add(Me.Label11)
+        Me.gbCompanyInfo.Controls.Add(Me.Label10)
+        Me.gbCompanyInfo.Controls.Add(Me.Label9)
+        Me.gbCompanyInfo.Controls.Add(Me.tbTitle3)
+        Me.gbCompanyInfo.Controls.Add(Me.tbTitle2)
+        Me.gbCompanyInfo.Controls.Add(Me.tbTitle1)
+        Me.gbCompanyInfo.Controls.Add(Me.tbAddress3)
+        Me.gbCompanyInfo.Controls.Add(Me.tbName3)
+        Me.gbCompanyInfo.Controls.Add(Me.tbName2)
+        Me.gbCompanyInfo.Controls.Add(Me.Label8)
+        Me.gbCompanyInfo.Controls.Add(Me.Label7)
+        Me.gbCompanyInfo.Controls.Add(Me.tbName1)
+        Me.gbCompanyInfo.Controls.Add(Me.tbCompanyRegNo)
+        Me.gbCompanyInfo.Controls.Add(Me.tbAddress2)
+        Me.gbCompanyInfo.Controls.Add(Me.tbAddress1)
+        Me.gbCompanyInfo.Controls.Add(Me.tbCompanyName)
+        Me.gbCompanyInfo.Controls.Add(Me.tbCompanyCode)
+        Me.gbCompanyInfo.Controls.Add(Me.Label5)
+        Me.gbCompanyInfo.Controls.Add(Me.Label4)
+        Me.gbCompanyInfo.Controls.Add(Me.Label3)
+        Me.gbCompanyInfo.Controls.Add(Me.Label2)
+        Me.gbCompanyInfo.Controls.Add(Me.Label1)
+        Me.gbCompanyInfo.Location = New System.Drawing.Point(13, 76)
+        Me.gbCompanyInfo.Name = "gbCompanyInfo"
+        Me.gbCompanyInfo.Size = New System.Drawing.Size(911, 303)
+        Me.gbCompanyInfo.TabIndex = 3
+        Me.gbCompanyInfo.TabStop = False
+        Me.gbCompanyInfo.Text = "Company Infomation"
+        '
+        'tbTaxRegNo
+        '
+        Me.tbTaxRegNo.Location = New System.Drawing.Point(614, 153)
+        Me.tbTaxRegNo.Name = "tbTaxRegNo"
+        Me.tbTaxRegNo.Size = New System.Drawing.Size(200, 20)
+        Me.tbTaxRegNo.TabIndex = 16
+        '
+        'tbWebsite
+        '
+        Me.tbWebsite.Location = New System.Drawing.Point(614, 127)
+        Me.tbWebsite.Margin = New System.Windows.Forms.Padding(28, 3, 3, 3)
+        Me.tbWebsite.Name = "tbWebsite"
+        Me.tbWebsite.Size = New System.Drawing.Size(200, 20)
+        Me.tbWebsite.TabIndex = 15
+        '
+        'tbEmail
+        '
+        Me.tbEmail.Location = New System.Drawing.Point(614, 101)
+        Me.tbEmail.Margin = New System.Windows.Forms.Padding(28, 3, 3, 3)
+        Me.tbEmail.Name = "tbEmail"
+        Me.tbEmail.Size = New System.Drawing.Size(200, 20)
+        Me.tbEmail.TabIndex = 14
+        '
+        'tbFax
+        '
+        Me.tbFax.Location = New System.Drawing.Point(614, 75)
+        Me.tbFax.Margin = New System.Windows.Forms.Padding(28, 3, 3, 3)
+        Me.tbFax.Name = "tbFax"
+        Me.tbFax.Size = New System.Drawing.Size(200, 20)
+        Me.tbFax.TabIndex = 13
+        '
+        'tbTel
+        '
+        Me.tbTel.Location = New System.Drawing.Point(614, 49)
+        Me.tbTel.Margin = New System.Windows.Forms.Padding(28, 3, 3, 3)
+        Me.tbTel.Name = "tbTel"
+        Me.tbTel.Size = New System.Drawing.Size(200, 20)
+        Me.tbTel.TabIndex = 12
+        '
+        'tbCountryName
+        '
+        Me.tbCountryName.BackColor = System.Drawing.SystemColors.Control
+        Me.tbCountryName.Enabled = False
+        Me.tbCountryName.Location = New System.Drawing.Point(705, 23)
+        Me.tbCountryName.Margin = New System.Windows.Forms.Padding(28, 3, 3, 3)
+        Me.tbCountryName.Name = "tbCountryName"
+        Me.tbCountryName.Size = New System.Drawing.Size(200, 20)
+        Me.tbCountryName.TabIndex = 26
+        '
+        'btnCountry
+        '
+        Me.btnCountry.AutoSize = True
+        Me.btnCountry.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnCountry.BackColor = System.Drawing.SystemColors.Control
+        Me.btnCountry.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnCountry.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCountry.Location = New System.Drawing.Point(670, 20)
+        Me.btnCountry.Name = "btnCountry"
+        Me.btnCountry.Size = New System.Drawing.Size(26, 25)
+        Me.btnCountry.TabIndex = 25
+        Me.btnCountry.Text = "..."
+        Me.btnCountry.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnCountry.UseVisualStyleBackColor = False
+        '
+        'tbCountryCode
+        '
+        Me.tbCountryCode.Location = New System.Drawing.Point(614, 23)
+        Me.tbCountryCode.Name = "tbCountryCode"
+        Me.tbCountryCode.Size = New System.Drawing.Size(50, 20)
+        Me.tbCountryCode.TabIndex = 11
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(540, 156)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(28, 10, 3, 0)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(68, 13)
+        Me.Label14.TabIndex = 23
+        Me.Label14.Text = "Tax Reg No:"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(540, 130)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(28, 10, 3, 0)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(52, 13)
+        Me.Label13.TabIndex = 22
+        Me.Label13.Text = "Website: "
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(541, 104)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(28, 10, 3, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(38, 13)
+        Me.Label12.TabIndex = 21
+        Me.Label12.Text = "Email: "
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(540, 78)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(28, 10, 3, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(30, 13)
+        Me.Label11.TabIndex = 20
+        Me.Label11.Text = "Fax: "
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(540, 52)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(28, 10, 3, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(31, 13)
+        Me.Label10.TabIndex = 19
+        Me.Label10.Text = "Tel.: "
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(540, 26)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(28, 10, 3, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(49, 13)
+        Me.Label9.TabIndex = 18
+        Me.Label9.Text = "Country: "
+        '
+        'tbTitle3
+        '
+        Me.tbTitle3.Location = New System.Drawing.Point(390, 264)
+        Me.tbTitle3.Name = "tbTitle3"
+        Me.tbTitle3.Size = New System.Drawing.Size(250, 20)
+        Me.tbTitle3.TabIndex = 26
+        '
+        'tbTitle2
+        '
+        Me.tbTitle2.Location = New System.Drawing.Point(390, 238)
+        Me.tbTitle2.Name = "tbTitle2"
+        Me.tbTitle2.Size = New System.Drawing.Size(250, 20)
+        Me.tbTitle2.TabIndex = 24
+        '
+        'tbTitle1
+        '
+        Me.tbTitle1.Location = New System.Drawing.Point(390, 212)
+        Me.tbTitle1.Margin = New System.Windows.Forms.Padding(28, 3, 3, 3)
+        Me.tbTitle1.Name = "tbTitle1"
+        Me.tbTitle1.Size = New System.Drawing.Size(250, 20)
+        Me.tbTitle1.TabIndex = 22
+        '
+        'tbAddress3
+        '
+        Me.tbAddress3.Location = New System.Drawing.Point(109, 127)
+        Me.tbAddress3.Name = "tbAddress3"
+        Me.tbAddress3.Size = New System.Drawing.Size(400, 20)
+        Me.tbAddress3.TabIndex = 5
+        '
+        'tbName3
+        '
+        Me.tbName3.Location = New System.Drawing.Point(109, 264)
+        Me.tbName3.Name = "tbName3"
+        Me.tbName3.Size = New System.Drawing.Size(250, 20)
+        Me.tbName3.TabIndex = 25
+        '
+        'tbName2
+        '
+        Me.tbName2.Location = New System.Drawing.Point(109, 238)
+        Me.tbName2.Name = "tbName2"
+        Me.tbName2.Size = New System.Drawing.Size(250, 20)
+        Me.tbName2.TabIndex = 23
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(482, 186)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(203, 10, 3, 10)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(27, 13)
+        Me.Label8.TabIndex = 13
+        Me.Label8.Text = "Title"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(174, 186)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(3, 10, 3, 10)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(35, 13)
+        Me.Label7.TabIndex = 12
+        Me.Label7.Text = "Name"
+        '
+        'tbName1
+        '
+        Me.tbName1.Location = New System.Drawing.Point(109, 212)
+        Me.tbName1.Name = "tbName1"
+        Me.tbName1.Size = New System.Drawing.Size(250, 20)
+        Me.tbName1.TabIndex = 21
+        '
+        'tbCompanyRegNo
+        '
+        Me.tbCompanyRegNo.Location = New System.Drawing.Point(109, 153)
+        Me.tbCompanyRegNo.Name = "tbCompanyRegNo"
+        Me.tbCompanyRegNo.Size = New System.Drawing.Size(200, 20)
+        Me.tbCompanyRegNo.TabIndex = 6
+        '
+        'tbAddress2
+        '
+        Me.tbAddress2.Location = New System.Drawing.Point(109, 101)
+        Me.tbAddress2.Name = "tbAddress2"
+        Me.tbAddress2.Size = New System.Drawing.Size(400, 20)
+        Me.tbAddress2.TabIndex = 4
+        '
+        'tbAddress1
+        '
+        Me.tbAddress1.Location = New System.Drawing.Point(109, 75)
+        Me.tbAddress1.Name = "tbAddress1"
+        Me.tbAddress1.Size = New System.Drawing.Size(400, 20)
+        Me.tbAddress1.TabIndex = 3
+        '
+        'tbCompanyName
+        '
+        Me.tbCompanyName.Location = New System.Drawing.Point(109, 49)
+        Me.tbCompanyName.Name = "tbCompanyName"
+        Me.tbCompanyName.Size = New System.Drawing.Size(400, 20)
+        Me.tbCompanyName.TabIndex = 2
+        '
+        'tbCompanyCode
+        '
+        Me.tbCompanyCode.Location = New System.Drawing.Point(109, 23)
+        Me.tbCompanyCode.Name = "tbCompanyCode"
+        Me.tbCompanyCode.Size = New System.Drawing.Size(100, 20)
+        Me.tbCompanyCode.TabIndex = 1
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(6, 215)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(3, 10, 3, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(96, 13)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "Authorized Signer: "
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(6, 156)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(3, 10, 3, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(97, 13)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Company Reg No: "
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(6, 78)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(3, 10, 3, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(48, 13)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Address:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(6, 52)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(3, 10, 3, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(88, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Company Name: "
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(6, 26)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(3, 10, 3, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(85, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Company Code: "
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(6, 26)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(3, 10, 3, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(62, 13)
+        Me.Label6.TabIndex = 5
+        Me.Label6.Text = "Fiscal Year:"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(37, 648)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(28, 10, 3, 10)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(65, 13)
+        Me.Label15.TabIndex = 32
+        Me.Label15.Text = "Created By: "
+        '
+        'tbCreatedBy
+        '
+        Me.tbCreatedBy.Enabled = False
+        Me.tbCreatedBy.Location = New System.Drawing.Point(108, 645)
+        Me.tbCreatedBy.Name = "tbCreatedBy"
+        Me.tbCreatedBy.Size = New System.Drawing.Size(100, 20)
+        Me.tbCreatedBy.TabIndex = 32
+        '
+        'tbCreatedOn
+        '
+        Me.tbCreatedOn.Enabled = False
+        Me.tbCreatedOn.Location = New System.Drawing.Point(214, 645)
+        Me.tbCreatedOn.Name = "tbCreatedOn"
+        Me.tbCreatedOn.Size = New System.Drawing.Size(200, 20)
+        Me.tbCreatedOn.TabIndex = 32
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(445, 648)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(28, 10, 3, 10)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(69, 13)
+        Me.Label16.TabIndex = 33
+        Me.Label16.Text = "Updated By: "
+        '
+        'tbUpdatedOn
+        '
+        Me.tbUpdatedOn.Enabled = False
+        Me.tbUpdatedOn.Location = New System.Drawing.Point(626, 645)
+        Me.tbUpdatedOn.Name = "tbUpdatedOn"
+        Me.tbUpdatedOn.Size = New System.Drawing.Size(200, 20)
+        Me.tbUpdatedOn.TabIndex = 34
+        '
+        'tbUpdatedBy
+        '
+        Me.tbUpdatedBy.Enabled = False
+        Me.tbUpdatedBy.Location = New System.Drawing.Point(520, 645)
+        Me.tbUpdatedBy.Name = "tbUpdatedBy"
+        Me.tbUpdatedBy.Size = New System.Drawing.Size(100, 20)
+        Me.tbUpdatedBy.TabIndex = 35
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Location = New System.Drawing.Point(13, 386)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(911, 100)
+        Me.GroupBox1.TabIndex = 36
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Accounting Period"
+        '
         'RecordForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(963, 447)
+        Me.BackColor = System.Drawing.SystemColors.Window
+        Me.ClientSize = New System.Drawing.Size(936, 695)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.tbUpdatedOn)
+        Me.Controls.Add(Me.tbUpdatedBy)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.tbCreatedOn)
+        Me.Controls.Add(Me.tbCreatedBy)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.gbCompanyInfo)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -480,6 +961,10 @@ Partial Class RecordForm
         Me.ToolStrip1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        Me.gbCompanyInfo.ResumeLayout(False)
+        Me.gbCompanyInfo.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -535,4 +1020,48 @@ Partial Class RecordForm
     Friend WithEvents tssl_User_Name As ToolStripStatusLabel
     Friend WithEvents tssl_Version As ToolStripStatusLabel
     Friend WithEvents tssl_Databse As ToolStripStatusLabel
+    Friend WithEvents NewToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Load1stRecordToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents gbCompanyInfo As GroupBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents tbCompanyName As TextBox
+    Friend WithEvents tbCompanyCode As TextBox
+    Friend WithEvents tbName1 As TextBox
+    Friend WithEvents tbCompanyRegNo As TextBox
+    Friend WithEvents tbAddress2 As TextBox
+    Friend WithEvents tbAddress1 As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents tbName3 As TextBox
+    Friend WithEvents tbName2 As TextBox
+    Friend WithEvents tbAddress3 As TextBox
+    Friend WithEvents tbTitle3 As TextBox
+    Friend WithEvents tbTitle2 As TextBox
+    Friend WithEvents tbTitle1 As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents tbCountryCode As TextBox
+    Friend WithEvents tbCountryName As TextBox
+    Friend WithEvents btnCountry As Button
+    Friend WithEvents tbTaxRegNo As TextBox
+    Friend WithEvents tbWebsite As TextBox
+    Friend WithEvents tbEmail As TextBox
+    Friend WithEvents tbFax As TextBox
+    Friend WithEvents tbTel As TextBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents tbCreatedBy As TextBox
+    Friend WithEvents tbCreatedOn As TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents tbUpdatedOn As TextBox
+    Friend WithEvents tbUpdatedBy As TextBox
+    Friend WithEvents GroupBox1 As GroupBox
 End Class

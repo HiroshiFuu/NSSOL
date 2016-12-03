@@ -1,28 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="nssolModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="nssolEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="nssols" EntityType="nssolModel.nssol" />
+    <EntitySet Name="CompanyInfos" EntityType="nssolModel.CompanyInfo" />
   </EntityContainer>
-  <EntityType Name="nssol">
+  <EntityType Name="CompanyInfo">
     <Key>
       <PropertyRef Name="Company_Code" />
     </Key>
     <Property Name="Company_Code" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
     <Property Name="Company_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Company_Reg__No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address_Line_1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address_Line_2" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address_Line_3" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Company_Reg_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Country" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
     <Property Name="Tel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="Fax" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Tax_Registration_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Authorized_Signer_1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Authorized_Signer_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Authorized_Signer_3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Authorized_Signer_Name_1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Authorized_Signer_Name_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Authorized_Signer_Name_3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Authorized_Signer_Title_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Authorized_Signer_Title_2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Authorized_Signer_Title_3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="Domestic_Currency_Code" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
-    <Property Name="Tax_Currency__Code" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Tax_Currency_Code" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
     <Property Name="Period" Type="DateTime" />
     <Property Name="Status" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
     <Property Name="Approve" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
@@ -31,5 +35,9 @@
     <Property Name="Gain_Loss_A_C" Type="String" MaxLength="19" FixedLength="false" Unicode="false" />
     <Property Name="Petty_Cash_Account_Code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
     <Property Name="Petty_Cash_Limit" Type="Decimal" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UpdatedOn" Type="DateTime" />
   </EntityType>
 </Schema>

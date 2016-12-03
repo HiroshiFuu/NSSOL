@@ -6,9 +6,13 @@ Imports System.Xml
 
 Public Class MainForm
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        setupConfigFile()
+        SetupConfigFile()
         Dim fm As RecordForm = RecordForm.getInstance(Me)
         fm.Show()
+        If fm.IsDisposed Then
+            Me.Dispose()
+            Return
+        End If
         fm.MdiParent = Me
         fm.Dock = DockStyle.Fill
         fm.WindowState = FormWindowState.Maximized
@@ -16,7 +20,7 @@ Public Class MainForm
         fm.Dock = DockStyle.Fill
     End Sub
 
-    Private Sub setupConfigFile()
+    Private Sub SetupConfigFile()
         Dim codeBase As String = [Assembly].GetExecutingAssembly().CodeBase
         Dim codeBaseDir As String = Path.GetDirectoryName(codeBase)
         Dim configFilename As String = Path.Combine(codeBaseDir, "SystemConfig.config")
@@ -48,6 +52,5 @@ Public Class MainForm
             MsgBox(ex.ToString(), MsgBoxStyle.OkOnly, "Error! Cannot read SystemConfig.config file")
             Me.Dispose()
         End Try
-
     End Sub
 End Class

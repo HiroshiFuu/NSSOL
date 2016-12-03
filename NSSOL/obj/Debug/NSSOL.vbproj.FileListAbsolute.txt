@@ -22,3 +22,5 @@ C:\Users\FENG0\Google Drive\NSSOL\NSSOL\obj\Debug\NSSOL.vbprojResolveAssemblyRef
 C:\Users\FENG0\Google Drive\NSSOL\NSSOL\bin\Debug\EntityFramework.dll
 C:\Users\FENG0\Google Drive\NSSOL\NSSOL\bin\Debug\EntityFramework.xml
 C:\Users\FENG0\Google Drive\NSSOL\NSSOL\bin\Debug\SystemConfig.config
+C:\Users\FENG0\Google Drive\NSSOL\NSSOL\bin\Debug\Country.xml
+C:\Users\FENG0\Google Drive\NSSOL\NSSOL\obj\Debug\NSSOL.CountryForm.resources

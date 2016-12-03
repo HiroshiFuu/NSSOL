@@ -1,25 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="nssolModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="nssol">
+  <EntityType Name="companyinfo">
     <Key>
       <PropertyRef Name="Company Code" />
     </Key>
     <Property Name="Company Code" Type="varchar" MaxLength="8" Nullable="false" />
     <Property Name="Company Name" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Address" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Company Reg. No" Type="varchar" MaxLength="50" />
+    <Property Name="Address Line 1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address Line 2" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address Line 3" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Company Reg No" Type="varchar" MaxLength="50" />
     <Property Name="Country" Type="varchar" MaxLength="3" Nullable="false" />
     <Property Name="Tel" Type="varchar" MaxLength="20" />
     <Property Name="Fax" Type="varchar" MaxLength="20" />
     <Property Name="Email" Type="varchar" MaxLength="50" />
     <Property Name="Website" Type="varchar" MaxLength="50" />
     <Property Name="Tax Registration No" Type="varchar" MaxLength="50" />
-    <Property Name="Authorized Signer 1" Type="varchar" MaxLength="50" />
-    <Property Name="Authorized Signer 2" Type="varchar" MaxLength="50" />
-    <Property Name="Authorized Signer 3" Type="varchar" MaxLength="50" />
-    <Property Name="Title" Type="varchar" MaxLength="50" />
+    <Property Name="Authorized Signer Name 1" Type="varchar" MaxLength="50" />
+    <Property Name="Authorized Signer Name 2" Type="varchar" MaxLength="50" />
+    <Property Name="Authorized Signer Name 3" Type="varchar" MaxLength="50" />
+    <Property Name="Authorized Signer Title 1" Type="varchar" MaxLength="20" />
+    <Property Name="Authorized Signer Title 2" Type="varchar" MaxLength="20" />
+    <Property Name="Authorized Signer Title 3" Type="varchar" MaxLength="20" />
     <Property Name="Domestic Currency Code" Type="varchar" MaxLength="3" Nullable="false" />
-    <Property Name="Tax Currency  Code" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Tax Currency Code" Type="varchar" MaxLength="3" Nullable="false" />
     <Property Name="Period" Type="date" />
     <Property Name="Status" Type="char" MaxLength="1" />
     <Property Name="Approve" Type="char" MaxLength="1" />
@@ -28,8 +32,12 @@
     <Property Name="Gain/Loss A/C" Type="varchar" MaxLength="19" />
     <Property Name="Petty Cash Account Code" Type="varchar" MaxLength="3" />
     <Property Name="Petty Cash Limit" Type="decimal" Precision="13" Scale="2" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="timestamp" Precision="0" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="UpdatedOn" Type="timestamp" Precision="0" />
   </EntityType>
   <EntityContainer Name="nssolModelStoreContainer">
-    <EntitySet Name="nssol" EntityType="Self.nssol" Schema="nssol" store:Type="Tables" />
+    <EntitySet Name="companyinfo" EntityType="Self.companyinfo" Schema="nssol" store:Type="Tables" />
   </EntityContainer>
 </Schema>

@@ -80,6 +80,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="constantsNenum.vb" />
+    <Compile Include="CountryForm.Designer.vb">
+      <DependentUpon>CountryForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CountryForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +94,12 @@
       <DependentUpon>MainForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Model\CompanyInfo.vb">
+      <DependentUpon>Model_NSSOL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CompanyInfoC.vb" />
+    <Compile Include="Model\NSSOL_DAL.vb" />
+    <Compile Include="Model\Country.vb" />
     <Compile Include="Model\Model_NSSOL.Context.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -100,9 +113,6 @@
     <Compile Include="Model\Model_NSSOL.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model_NSSOL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\nssol.vb">
       <DependentUpon>Model_NSSOL.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\SystemConfig.vb" />
@@ -130,6 +140,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CountryForm.resx">
+      <DependentUpon>CountryForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +237,10 @@
     <None Include="Resources\restore.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Country.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Model\Model_NSSOL.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model_NSSOL.edmx</DependentUpon>

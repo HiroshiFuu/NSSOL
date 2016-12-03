@@ -5,26 +5,30 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="nssolModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="nssol">
+        <EntityType Name="companyinfo">
           <Key>
             <PropertyRef Name="Company Code" />
           </Key>
           <Property Name="Company Code" Type="varchar" MaxLength="8" Nullable="false" />
           <Property Name="Company Name" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Address" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Company Reg. No" Type="varchar" MaxLength="50" />
+          <Property Name="Address Line 1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address Line 2" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address Line 3" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Company Reg No" Type="varchar" MaxLength="50" />
           <Property Name="Country" Type="varchar" MaxLength="3" Nullable="false" />
           <Property Name="Tel" Type="varchar" MaxLength="20" />
           <Property Name="Fax" Type="varchar" MaxLength="20" />
           <Property Name="Email" Type="varchar" MaxLength="50" />
           <Property Name="Website" Type="varchar" MaxLength="50" />
           <Property Name="Tax Registration No" Type="varchar" MaxLength="50" />
-          <Property Name="Authorized Signer 1" Type="varchar" MaxLength="50" />
-          <Property Name="Authorized Signer 2" Type="varchar" MaxLength="50" />
-          <Property Name="Authorized Signer 3" Type="varchar" MaxLength="50" />
-          <Property Name="Title" Type="varchar" MaxLength="50" />
+          <Property Name="Authorized Signer Name 1" Type="varchar" MaxLength="50" />
+          <Property Name="Authorized Signer Name 2" Type="varchar" MaxLength="50" />
+          <Property Name="Authorized Signer Name 3" Type="varchar" MaxLength="50" />
+          <Property Name="Authorized Signer Title 1" Type="varchar" MaxLength="20" />
+          <Property Name="Authorized Signer Title 2" Type="varchar" MaxLength="20" />
+          <Property Name="Authorized Signer Title 3" Type="varchar" MaxLength="20" />
           <Property Name="Domestic Currency Code" Type="varchar" MaxLength="3" Nullable="false" />
-          <Property Name="Tax Currency  Code" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="Tax Currency Code" Type="varchar" MaxLength="3" Nullable="false" />
           <Property Name="Period" Type="date" />
           <Property Name="Status" Type="char" MaxLength="1" />
           <Property Name="Approve" Type="char" MaxLength="1" />
@@ -33,37 +37,45 @@
           <Property Name="Gain/Loss A/C" Type="varchar" MaxLength="19" />
           <Property Name="Petty Cash Account Code" Type="varchar" MaxLength="3" />
           <Property Name="Petty Cash Limit" Type="decimal" Precision="13" Scale="2" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="timestamp" Precision="0" />
+          <Property Name="UpdatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="UpdatedOn" Type="timestamp" Precision="0" />
         </EntityType>
         <EntityContainer Name="nssolModelStoreContainer">
-          <EntitySet Name="nssol" EntityType="Self.nssol" Schema="nssol" store:Type="Tables" />
+          <EntitySet Name="companyinfo" EntityType="Self.companyinfo" Schema="nssol" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="nssolModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="nssolEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="nssols" EntityType="nssolModel.nssol" />
+          <EntitySet Name="CompanyInfos" EntityType="nssolModel.CompanyInfo" />
         </EntityContainer>
-        <EntityType Name="nssol">
+        <EntityType Name="CompanyInfo">
           <Key>
             <PropertyRef Name="Company_Code" />
           </Key>
           <Property Name="Company_Code" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
           <Property Name="Company_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Company_Reg__No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_Line_1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_Line_2" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_Line_3" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Company_Reg_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Country" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
           <Property Name="Tel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Fax" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Tax_Registration_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Authorized_Signer_1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Authorized_Signer_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Authorized_Signer_3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Authorized_Signer_Name_1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Authorized_Signer_Name_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Authorized_Signer_Name_3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Authorized_Signer_Title_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Authorized_Signer_Title_2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Authorized_Signer_Title_3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Domestic_Currency_Code" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
-          <Property Name="Tax_Currency__Code" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Tax_Currency_Code" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
           <Property Name="Period" Type="DateTime" />
           <Property Name="Status" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
           <Property Name="Approve" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
@@ -72,6 +84,10 @@
           <Property Name="Gain_Loss_A_C" Type="String" MaxLength="19" FixedLength="false" Unicode="false" />
           <Property Name="Petty_Cash_Account_Code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
           <Property Name="Petty_Cash_Limit" Type="Decimal" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UpdatedOn" Type="DateTime" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -79,9 +95,13 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="nssolModelStoreContainer" CdmEntityContainer="nssolEntities">
-          <EntitySetMapping Name="nssols">
-            <EntityTypeMapping TypeName="nssolModel.nssol">
-              <MappingFragment StoreEntitySet="nssol">
+          <EntitySetMapping Name="CompanyInfos">
+            <EntityTypeMapping TypeName="nssolModel.CompanyInfo">
+              <MappingFragment StoreEntitySet="companyinfo">
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
                 <ScalarProperty Name="Petty_Cash_Limit" ColumnName="Petty Cash Limit" />
                 <ScalarProperty Name="Petty_Cash_Account_Code" ColumnName="Petty Cash Account Code" />
                 <ScalarProperty Name="Gain_Loss_A_C" ColumnName="Gain/Loss A/C" />
@@ -90,20 +110,24 @@
                 <ScalarProperty Name="Approve" ColumnName="Approve" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="Period" ColumnName="Period" />
-                <ScalarProperty Name="Tax_Currency__Code" ColumnName="Tax Currency  Code" />
+                <ScalarProperty Name="Tax_Currency_Code" ColumnName="Tax Currency Code" />
                 <ScalarProperty Name="Domestic_Currency_Code" ColumnName="Domestic Currency Code" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Authorized_Signer_3" ColumnName="Authorized Signer 3" />
-                <ScalarProperty Name="Authorized_Signer_2" ColumnName="Authorized Signer 2" />
-                <ScalarProperty Name="Authorized_Signer_1" ColumnName="Authorized Signer 1" />
+                <ScalarProperty Name="Authorized_Signer_Title_3" ColumnName="Authorized Signer Title 3" />
+                <ScalarProperty Name="Authorized_Signer_Title_2" ColumnName="Authorized Signer Title 2" />
+                <ScalarProperty Name="Authorized_Signer_Title_1" ColumnName="Authorized Signer Title 1" />
+                <ScalarProperty Name="Authorized_Signer_Name_3" ColumnName="Authorized Signer Name 3" />
+                <ScalarProperty Name="Authorized_Signer_Name_2" ColumnName="Authorized Signer Name 2" />
+                <ScalarProperty Name="Authorized_Signer_Name_1" ColumnName="Authorized Signer Name 1" />
                 <ScalarProperty Name="Tax_Registration_No" ColumnName="Tax Registration No" />
                 <ScalarProperty Name="Website" ColumnName="Website" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Fax" ColumnName="Fax" />
                 <ScalarProperty Name="Tel" ColumnName="Tel" />
                 <ScalarProperty Name="Country" ColumnName="Country" />
-                <ScalarProperty Name="Company_Reg__No" ColumnName="Company Reg. No" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Company_Reg_No" ColumnName="Company Reg No" />
+                <ScalarProperty Name="Address_Line_3" ColumnName="Address Line 3" />
+                <ScalarProperty Name="Address_Line_2" ColumnName="Address Line 2" />
+                <ScalarProperty Name="Address_Line_1" ColumnName="Address Line 1" />
                 <ScalarProperty Name="Company_Name" ColumnName="Company Name" />
                 <ScalarProperty Name="Company_Code" ColumnName="Company Code" />
               </MappingFragment>
@@ -127,6 +151,7 @@
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="true" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="DDLGenerationTemplate" Value="$(VSEFTools)\DBGen\SSDLToMySQL.tt" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
