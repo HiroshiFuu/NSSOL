@@ -142,7 +142,7 @@ Partial Class RecordForm
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.ExitToolStripMenuItem, Me.Load1stRecordToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.Load1stRecordToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.ShortcutKeyDisplayString = "F"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
@@ -362,6 +362,7 @@ Partial Class RecordForm
         '
         'TSBtn_Add
         '
+        Me.TSBtn_Add.Enabled = False
         Me.TSBtn_Add.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TSBtn_Add.Image = CType(resources.GetObject("TSBtn_Add.Image"), System.Drawing.Image)
         Me.TSBtn_Add.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None

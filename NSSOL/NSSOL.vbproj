@@ -97,8 +97,7 @@
     <Compile Include="Model\CompanyInfo.vb">
       <DependentUpon>Model_NSSOL.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\CompanyInfoC.vb" />
-    <Compile Include="Model\NSSOL_DAL.vb" />
+    <Compile Include="Model\CompanyInfoDAL.vb" />
     <Compile Include="Model\Country.vb" />
     <Compile Include="Model\Model_NSSOL.Context.vb">
       <AutoGen>True</AutoGen>
