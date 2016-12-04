@@ -6,9 +6,12 @@ Public Class RecordForm
     Private config As SystemConfigInterface
     Private CompanyInfoList As List(Of CompanyInfo)
     Private SelectedCompanyInfoIndex As Integer = -1
-    Private CountryList As List(Of Country)
+    Private CountryList As List(Of CodeNamePair)
     Private CountryTable As DataTable
+    Private CurrencyList As List(Of CodeNamePair)
+    Private CurrencyTable As DataTable
     Private LockTextBoxEvent As Boolean
+    Private IsNewEntry As Boolean
 
 #Region "Form methods"
     'restricted
@@ -34,6 +37,16 @@ Public Class RecordForm
         tssl_User_Name.Text = "User Name: " + config.getUser_Name()
         tssl_Version.Text = "Version: " + config.getVersion()
         tssl_Databse.Text = "Databse: " + config.getDatabase()
+        tbFiscalYear.Text = config.getFiscal_Year()
+        tbYearPeriod.Text = config.getYear_Period()
+        tbYearPeriodTo.Text = config.getYear_Period_To()
+        tbCurrentPeriod.Text = config.getCurrent_Period()
+        tbPreviousYearClose.Text = config.getPrevious_Year_Close()
+        If config.getStatus().ToString().CompareTo("O") = 0 Then
+            tbStatus.Text = "OPEN"
+        Else
+            tbStatus.Text = "CLOSE"
+        End If
 
         Try
             LoadRecordsFromDB()
@@ -48,6 +61,13 @@ Public Class RecordForm
             MsgBox(ex.ToString(), MsgBoxStyle.OkOnly, "Country XML ERROR!")
             Me.Dispose()
         End Try
+
+        Try
+            LoadCurrencyFromXML()
+        Catch ex As Exception
+            MsgBox(ex.ToString(), MsgBoxStyle.OkOnly, "Currency XML ERROR!")
+            Me.Dispose()
+        End Try
         If CompanyInfoList.Count <> 0 Then
             CompanyInfoLoadRountineCall(NaviAction.First)
         End If
@@ -56,11 +76,18 @@ Public Class RecordForm
         CountryTable.Columns.Add("Code")
         CountryTable.Columns.Add("Name")
         tbCountryName.Text = "Unknown"
-        For Each country As Country In CountryList
+        For Each country As CodeNamePair In CountryList
             If country.Code.CompareTo(tbCountryCode.Text) = 0 Then
                 tbCountryName.Text = country.Name
             End If
             CountryTable.Rows.Add(country.Code, country.Name)
+        Next
+
+        CurrencyTable = New DataTable()
+        CurrencyTable.Columns.Add("Code")
+        CurrencyTable.Columns.Add("Name")
+        For Each currency As CodeNamePair In CurrencyList
+            CurrencyTable.Rows.Add(currency.Code, currency.Name)
         Next
     End Sub
 #End Region
@@ -76,7 +103,7 @@ Public Class RecordForm
 
     Private Sub LoadCountryFromXML()
         Using reader As XmlReader = XmlReader.Create("./Country.xml")
-            CountryList = New List(Of Country)
+            CountryList = New List(Of CodeNamePair)
             While reader.Read()
                 If Not reader.IsStartElement Then
                     Continue While
@@ -86,8 +113,28 @@ Public Class RecordForm
                     Dim code, name As String
                     code = reader.ReadElementString("Code")
                     name = reader.ReadElementString("Name")
-                    Dim country As Country = New Country(code, name)
+                    Dim country As CodeNamePair = New CodeNamePair(code, name)
                     CountryList.Add(country)
+                    reader.Read()
+                End If
+            End While
+        End Using
+    End Sub
+
+    Private Sub LoadCurrencyFromXML()
+        Using reader As XmlReader = XmlReader.Create("./Currency.xml")
+            CurrencyList = New List(Of CodeNamePair)
+            While reader.Read()
+                If Not reader.IsStartElement Then
+                    Continue While
+                End If
+                If reader.Name = "Currency" Then
+                    reader.Read()
+                    Dim code, name As String
+                    code = reader.ReadElementString("Code")
+                    name = reader.ReadElementString("Name")
+                    Dim currency As CodeNamePair = New CodeNamePair(code, name)
+                    CurrencyList.Add(currency)
                     reader.Read()
                 End If
             End While
@@ -100,6 +147,12 @@ Public Class RecordForm
         LockTextBoxEvent = True
         If companyinfo Is Nothing Then
             For Each ctrl As Control In gbCompanyInfo.Controls
+                If ctrl.GetType() Is GetType(TextBox) Then
+                    Dim textbox As TextBox = ctrl
+                    textbox.Text = ""
+                End If
+            Next
+            For Each ctrl As Control In gbAccountingPeriod.Controls
                 If ctrl.GetType() Is GetType(TextBox) Then
                     Dim textbox As TextBox = ctrl
                     textbox.Text = ""
@@ -128,6 +181,8 @@ Public Class RecordForm
             tbCreatedOn.Text = companyinfo.CreatedOn
             tbUpdatedBy.Text = companyinfo.UpdatedBy
             tbUpdatedOn.Text = companyinfo.UpdatedOn
+            tbDomesticCurrencyCode.Text = companyinfo.Domestic_Currency_Code
+            tbTaxCurrencyCode.Text = companyinfo.Tax_Currency_Code
         End If
         For Each ctrl As Control In gbCompanyInfo.Controls
             If ctrl.GetType() Is GetType(TextBox) Then
@@ -135,7 +190,14 @@ Public Class RecordForm
                 textbox.BackColor = SystemColors.Window
             End If
         Next
+        For Each ctrl As Control In gbAccountingPeriod.Controls
+            If ctrl.GetType() Is GetType(TextBox) Then
+                Dim textbox As TextBox = ctrl
+                textbox.BackColor = SystemColors.Window
+            End If
+        Next
         LockTextBoxEvent = False
+        IsNewEntry = False
     End Sub
 
     Private Sub SetNaviControls(SelectedIndex As Integer)
@@ -184,6 +246,11 @@ Public Class RecordForm
                 TSBtn_Save.Enabled = False
                 TSBtn_Delete.Enabled = False
                 TSBtn_Cancel.Enabled = False
+            Case ActionBtnState.ModifiedNew
+                TSBtn_Add.Enabled = True
+                TSBtn_Save.Enabled = False
+                TSBtn_Delete.Enabled = False
+                TSBtn_Cancel.Enabled = True
         End Select
     End Sub
 
@@ -268,8 +335,8 @@ Public Class RecordForm
         End If
         companyinfo.UpdatedBy = tbUpdatedBy.Text
         companyinfo.UpdatedOn = DateTime.Now.ToString("dd-MM-yyyy") + " " + DateTime.Now.ToString("T")
-        companyinfo.Domestic_Currency_Code = "SGD"
-        companyinfo.Tax_Currency_Code = "SGD"
+        companyinfo.Domestic_Currency_Code = tbDomesticCurrencyCode.Text
+        companyinfo.Tax_Currency_Code = tbTaxCurrencyCode.Text
         Return companyinfo
     End Function
 #End Region
@@ -301,9 +368,9 @@ Public Class RecordForm
     End Sub
 
     Private Sub btnCountry_Click(sender As Object, e As EventArgs) Handles btnCountry.Click
-        Dim fm = New CountryForm()
+        Dim fm = New CodeNamePairForm("Country")
         Dim SelectedIndex As Integer = -1
-        For i As Integer = 0 To CountryList.Count Step 1
+        For i As Integer = 0 To CountryList.Count - 1 Step 1
             If CountryList(i).Code.CompareTo(tbCountryCode.Text) = 0 Then
                 SelectedIndex = i
                 Exit For
@@ -313,16 +380,41 @@ Public Class RecordForm
         Dim result As DialogResult
         result = fm.ShowDialog()
         If result = DialogResult.OK Then
-            tbCountryCode.Text = fm.dgv_Country.CurrentRow.Cells(0).Value
-            tbCountryName.Text = fm.dgv_Country.CurrentRow.Cells(1).Value
+            tbCountryCode.Text = fm.dgv_CodeNamePair.CurrentRow.Cells(0).Value
+            tbCountryName.Text = fm.dgv_CodeNamePair.CurrentRow.Cells(1).Value
         End If
     End Sub
 
-    Private Sub TextBox_TextChanged(sender As Object, e As EventArgs) Handles tbCompanyCode.TextChanged, tbCompanyName.TextChanged, tbAddress1.TextChanged, tbAddress2.TextChanged, tbAddress3.TextChanged, tbName1.TextChanged, tbName2.TextChanged, tbName3.TextChanged, tbTitle1.TextChanged, tbTitle2.TextChanged, tbTitle3.TextChanged, tbCountryCode.TextChanged, tbTel.TextChanged, tbFax.TextChanged, tbEmail.TextChanged, tbWebsite.TextChanged, tbTaxRegNo.TextChanged
+    Private Sub btnCurrency_Click(sender As Object, e As EventArgs) Handles btnDomesticCurrency.Click, btnTaxCurrency.Click
+        Dim button As Button = sender
+        Dim textbox As TextBox = Nothing
+        If button.Name.Contains("DomesticCurrency") Then
+            textbox = tbDomesticCurrencyCode
+        End If
+        If button.Name.Contains("TaxCurrency") Then
+            textbox = tbTaxCurrencyCode
+        End If
+        Dim fm = New CodeNamePairForm("Currency")
+        Dim SelectedIndex As Integer = -1
+        For i As Integer = 0 To CurrencyList.Count - 1 Step 1
+            If CurrencyList(i).Code.CompareTo(textbox.Text) = 0 Then
+                SelectedIndex = i
+                Exit For
+            End If
+        Next
+        fm.BindData(CurrencyTable, SelectedIndex)
+        Dim result As DialogResult
+        result = fm.ShowDialog()
+        If result = DialogResult.OK Then
+            textbox.Text = fm.dgv_CodeNamePair.CurrentRow.Cells(0).Value
+        End If
+    End Sub
+
+    Private Sub TextBox_TextChanged(sender As Object, e As EventArgs) Handles tbCompanyCode.TextChanged, tbCompanyName.TextChanged, tbAddress1.TextChanged, tbAddress2.TextChanged, tbAddress3.TextChanged, tbName1.TextChanged, tbName2.TextChanged, tbName3.TextChanged, tbTitle1.TextChanged, tbTitle2.TextChanged, tbTitle3.TextChanged, tbCountryCode.TextChanged, tbTel.TextChanged, tbFax.TextChanged, tbEmail.TextChanged, tbWebsite.TextChanged, tbTaxRegNo.TextChanged, tbDomesticCurrencyCode.TextChanged, tbTaxCurrencyCode.TextChanged
         Dim textbox As TextBox = sender
         If textbox.Name.CompareTo(tbCountryCode.Name) = 0 Then
             tbCountryName.Text = "Unknown"
-            For Each country As Country In CountryList
+            For Each country As CodeNamePair In CountryList
                 If country.Code.CompareTo(tbCountryCode.Text) = 0 Then
                     tbCountryName.Text = country.Name
                 End If
@@ -331,13 +423,19 @@ Public Class RecordForm
         If LockTextBoxEvent Then
             Return
         End If
-        textbox.BackColor = Color.Yellow
-        If textbox.Name.CompareTo(tbCompanyCode.Name) = 0 Then
-            SetActionBtns(ActionBtnState.New)
-            SetNaviControls(-1)
-            LockTextBoxEvent = True
-        Else
+        If Not IsNewEntry Then
+            textbox.BackColor = Color.Yellow
             SetActionBtns(ActionBtnState.Modified)
+        End If
+        If textbox.Name.CompareTo(tbCompanyCode.Name) = 0 Then
+            If IsNewEntry Then
+                SetActionBtns(ActionBtnState.New)
+                SetNaviControls(-1)
+                LockTextBoxEvent = True
+            Else
+                SetActionBtns(ActionBtnState.ModifiedNew)
+                SetNaviControls(-1)
+            End If
         End If
     End Sub
 
@@ -394,6 +492,7 @@ Public Class RecordForm
 
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
         CompanyInfoLoadRountineCall(NaviAction.Unload)
+        IsNewEntry = True
     End Sub
 
     Private Sub Load1stRecordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Load1stRecordToolStripMenuItem.Click

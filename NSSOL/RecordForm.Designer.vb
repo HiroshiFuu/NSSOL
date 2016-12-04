@@ -121,24 +121,24 @@ Partial Class RecordForm
         Me.tbFiscalYear = New System.Windows.Forms.TextBox()
         Me.tbCurrentPeriod = New System.Windows.Forms.TextBox()
         Me.tbDomesticCurrencyCode = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnDomesticCurrency = New System.Windows.Forms.Button()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.tbYearPeriod = New System.Windows.Forms.TextBox()
         Me.tbPreviousYearClose = New System.Windows.Forms.TextBox()
         Me.tbTaxCurrencyCode = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnTaxCurrency = New System.Windows.Forms.Button()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.tbYearPeriodTo = New System.Windows.Forms.TextBox()
         Me.tbStatus = New System.Windows.Forms.TextBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.gbAccountingPeriod = New System.Windows.Forms.GroupBox()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.gbCompanyInfo.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.gbAccountingPeriod.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -961,6 +961,7 @@ Partial Class RecordForm
         '
         'tbFiscalYear
         '
+        Me.tbFiscalYear.Enabled = False
         Me.tbFiscalYear.Location = New System.Drawing.Point(150, 23)
         Me.tbFiscalYear.Name = "tbFiscalYear"
         Me.tbFiscalYear.Size = New System.Drawing.Size(80, 20)
@@ -968,32 +969,33 @@ Partial Class RecordForm
         '
         'tbCurrentPeriod
         '
+        Me.tbCurrentPeriod.Enabled = False
         Me.tbCurrentPeriod.Location = New System.Drawing.Point(150, 49)
         Me.tbCurrentPeriod.Name = "tbCurrentPeriod"
         Me.tbCurrentPeriod.Size = New System.Drawing.Size(80, 20)
-        Me.tbCurrentPeriod.TabIndex = 28
+        Me.tbCurrentPeriod.TabIndex = 39
         '
         'tbDomesticCurrencyCode
         '
         Me.tbDomesticCurrencyCode.Location = New System.Drawing.Point(150, 75)
         Me.tbDomesticCurrencyCode.Name = "tbDomesticCurrencyCode"
         Me.tbDomesticCurrencyCode.Size = New System.Drawing.Size(80, 20)
-        Me.tbDomesticCurrencyCode.TabIndex = 29
+        Me.tbDomesticCurrencyCode.TabIndex = 33
         '
-        'Button1
+        'btnDomesticCurrency
         '
-        Me.Button1.AutoSize = True
-        Me.Button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Button1.BackColor = System.Drawing.SystemColors.Control
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(236, 72)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(26, 25)
-        Me.Button1.TabIndex = 27
-        Me.Button1.Text = "..."
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnDomesticCurrency.AutoSize = True
+        Me.btnDomesticCurrency.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnDomesticCurrency.BackColor = System.Drawing.SystemColors.Control
+        Me.btnDomesticCurrency.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnDomesticCurrency.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDomesticCurrency.Location = New System.Drawing.Point(236, 72)
+        Me.btnDomesticCurrency.Name = "btnDomesticCurrency"
+        Me.btnDomesticCurrency.Size = New System.Drawing.Size(26, 25)
+        Me.btnDomesticCurrency.TabIndex = 32
+        Me.btnDomesticCurrency.Text = "..."
+        Me.btnDomesticCurrency.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnDomesticCurrency.UseVisualStyleBackColor = False
         '
         'Label21
         '
@@ -1027,39 +1029,41 @@ Partial Class RecordForm
         '
         'tbYearPeriod
         '
+        Me.tbYearPeriod.Enabled = False
         Me.tbYearPeriod.Location = New System.Drawing.Point(442, 23)
         Me.tbYearPeriod.Name = "tbYearPeriod"
         Me.tbYearPeriod.Size = New System.Drawing.Size(80, 20)
-        Me.tbYearPeriod.TabIndex = 34
+        Me.tbYearPeriod.TabIndex = 28
         '
         'tbPreviousYearClose
         '
+        Me.tbPreviousYearClose.Enabled = False
         Me.tbPreviousYearClose.Location = New System.Drawing.Point(442, 49)
         Me.tbPreviousYearClose.Name = "tbPreviousYearClose"
         Me.tbPreviousYearClose.Size = New System.Drawing.Size(80, 20)
-        Me.tbPreviousYearClose.TabIndex = 35
+        Me.tbPreviousYearClose.TabIndex = 31
         '
         'tbTaxCurrencyCode
         '
         Me.tbTaxCurrencyCode.Location = New System.Drawing.Point(442, 75)
         Me.tbTaxCurrencyCode.Name = "tbTaxCurrencyCode"
         Me.tbTaxCurrencyCode.Size = New System.Drawing.Size(80, 20)
-        Me.tbTaxCurrencyCode.TabIndex = 36
+        Me.tbTaxCurrencyCode.TabIndex = 35
         '
-        'Button2
+        'btnTaxCurrency
         '
-        Me.Button2.AutoSize = True
-        Me.Button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Button2.BackColor = System.Drawing.SystemColors.Control
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(528, 72)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(26, 25)
-        Me.Button2.TabIndex = 33
-        Me.Button2.Text = "..."
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnTaxCurrency.AutoSize = True
+        Me.btnTaxCurrency.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnTaxCurrency.BackColor = System.Drawing.SystemColors.Control
+        Me.btnTaxCurrency.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnTaxCurrency.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTaxCurrency.Location = New System.Drawing.Point(528, 72)
+        Me.btnTaxCurrency.Name = "btnTaxCurrency"
+        Me.btnTaxCurrency.Size = New System.Drawing.Size(26, 25)
+        Me.btnTaxCurrency.TabIndex = 36
+        Me.btnTaxCurrency.Text = "..."
+        Me.btnTaxCurrency.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnTaxCurrency.UseVisualStyleBackColor = False
         '
         'Label24
         '
@@ -1083,46 +1087,48 @@ Partial Class RecordForm
         '
         'tbYearPeriodTo
         '
+        Me.tbYearPeriodTo.Enabled = False
         Me.tbYearPeriodTo.Location = New System.Drawing.Point(666, 23)
         Me.tbYearPeriodTo.Name = "tbYearPeriodTo"
         Me.tbYearPeriodTo.Size = New System.Drawing.Size(80, 20)
-        Me.tbYearPeriodTo.TabIndex = 41
+        Me.tbYearPeriodTo.TabIndex = 29
         '
         'tbStatus
         '
+        Me.tbStatus.Enabled = False
         Me.tbStatus.Location = New System.Drawing.Point(666, 49)
         Me.tbStatus.Margin = New System.Windows.Forms.Padding(33, 3, 3, 3)
         Me.tbStatus.Name = "tbStatus"
         Me.tbStatus.Size = New System.Drawing.Size(80, 20)
-        Me.tbStatus.TabIndex = 42
+        Me.tbStatus.TabIndex = 32
         '
-        'GroupBox1
+        'gbAccountingPeriod
         '
-        Me.GroupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.GroupBox1.Controls.Add(Me.tbStatus)
-        Me.GroupBox1.Controls.Add(Me.tbYearPeriodTo)
-        Me.GroupBox1.Controls.Add(Me.Label23)
-        Me.GroupBox1.Controls.Add(Me.Label24)
-        Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.tbTaxCurrencyCode)
-        Me.GroupBox1.Controls.Add(Me.tbPreviousYearClose)
-        Me.GroupBox1.Controls.Add(Me.tbYearPeriod)
-        Me.GroupBox1.Controls.Add(Me.Label19)
-        Me.GroupBox1.Controls.Add(Me.Label20)
-        Me.GroupBox1.Controls.Add(Me.Label21)
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.tbDomesticCurrencyCode)
-        Me.GroupBox1.Controls.Add(Me.tbCurrentPeriod)
-        Me.GroupBox1.Controls.Add(Me.tbFiscalYear)
-        Me.GroupBox1.Controls.Add(Me.Label18)
-        Me.GroupBox1.Controls.Add(Me.Label17)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Location = New System.Drawing.Point(13, 386)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(911, 107)
-        Me.GroupBox1.TabIndex = 36
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Accounting Period"
+        Me.gbAccountingPeriod.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.gbAccountingPeriod.Controls.Add(Me.tbStatus)
+        Me.gbAccountingPeriod.Controls.Add(Me.tbYearPeriodTo)
+        Me.gbAccountingPeriod.Controls.Add(Me.Label23)
+        Me.gbAccountingPeriod.Controls.Add(Me.Label24)
+        Me.gbAccountingPeriod.Controls.Add(Me.btnTaxCurrency)
+        Me.gbAccountingPeriod.Controls.Add(Me.tbTaxCurrencyCode)
+        Me.gbAccountingPeriod.Controls.Add(Me.tbPreviousYearClose)
+        Me.gbAccountingPeriod.Controls.Add(Me.tbYearPeriod)
+        Me.gbAccountingPeriod.Controls.Add(Me.Label19)
+        Me.gbAccountingPeriod.Controls.Add(Me.Label20)
+        Me.gbAccountingPeriod.Controls.Add(Me.Label21)
+        Me.gbAccountingPeriod.Controls.Add(Me.btnDomesticCurrency)
+        Me.gbAccountingPeriod.Controls.Add(Me.tbDomesticCurrencyCode)
+        Me.gbAccountingPeriod.Controls.Add(Me.tbCurrentPeriod)
+        Me.gbAccountingPeriod.Controls.Add(Me.tbFiscalYear)
+        Me.gbAccountingPeriod.Controls.Add(Me.Label18)
+        Me.gbAccountingPeriod.Controls.Add(Me.Label17)
+        Me.gbAccountingPeriod.Controls.Add(Me.Label6)
+        Me.gbAccountingPeriod.Location = New System.Drawing.Point(13, 386)
+        Me.gbAccountingPeriod.Name = "gbAccountingPeriod"
+        Me.gbAccountingPeriod.Size = New System.Drawing.Size(911, 107)
+        Me.gbAccountingPeriod.TabIndex = 36
+        Me.gbAccountingPeriod.TabStop = False
+        Me.gbAccountingPeriod.Text = "Accounting Period"
         '
         'RecordForm
         '
@@ -1131,7 +1137,7 @@ Partial Class RecordForm
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(936, 695)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.gbAccountingPeriod)
         Me.Controls.Add(Me.tbUpdatedOn)
         Me.Controls.Add(Me.tbUpdatedBy)
         Me.Controls.Add(Me.Label16)
@@ -1155,8 +1161,8 @@ Partial Class RecordForm
         Me.StatusStrip1.PerformLayout()
         Me.gbCompanyInfo.ResumeLayout(False)
         Me.gbCompanyInfo.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.gbAccountingPeriod.ResumeLayout(False)
+        Me.gbAccountingPeriod.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1260,13 +1266,13 @@ Partial Class RecordForm
     Friend WithEvents tbYearPeriod As TextBox
     Friend WithEvents tbPreviousYearClose As TextBox
     Friend WithEvents tbTaxCurrencyCode As TextBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnTaxCurrency As Button
     Friend WithEvents Label24 As Label
     Friend WithEvents Label23 As Label
     Friend WithEvents tbYearPeriodTo As TextBox
     Friend WithEvents tbStatus As TextBox
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents gbAccountingPeriod As GroupBox
+    Friend WithEvents btnDomesticCurrency As Button
     Friend WithEvents tbDomesticCurrencyCode As TextBox
     Friend WithEvents tbCurrentPeriod As TextBox
     Friend WithEvents tbFiscalYear As TextBox

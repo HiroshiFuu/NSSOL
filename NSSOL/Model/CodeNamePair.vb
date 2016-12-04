@@ -1,4 +1,4 @@
-﻿Public Class Country
+﻿Public Class CodeNamePair
 
     Public Property Code As String
     Public Property Name As String

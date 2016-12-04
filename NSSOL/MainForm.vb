@@ -41,6 +41,10 @@ Public Class MainForm
             config.setUser_Name(nvc("User Name"))
             config.setVersion(nvc("Version"))
             config.setDatabase(nvc("Database"))
+
+            xNode = doc.GetElementsByTagName("SystemData").Item(0)
+            csh = New NameValueSectionHandler()
+            nvc = CType(csh.Create(Nothing, Nothing, xNode), NameValueCollection)
             config.setFiscal_Year(nvc("Fiscal Year"))
             config.setCurrent_Period(nvc("Current Period"))
             config.setYear_Period(nvc("Year Period"))

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class CountryForm
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class CodeNamePairForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,37 +20,37 @@ Partial Class CountryForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.dgv_Country = New System.Windows.Forms.DataGridView()
+        Me.dgv_CodeNamePair = New System.Windows.Forms.DataGridView()
         Me.tbnCancel = New System.Windows.Forms.Button()
         Me.btnSelect = New System.Windows.Forms.Button()
-        CType(Me.dgv_Country, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv_CodeNamePair, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'dgv_Country
+        'dgv_CodeNamePair
         '
-        Me.dgv_Country.AllowUserToAddRows = False
-        Me.dgv_Country.AllowUserToDeleteRows = False
-        Me.dgv_Country.AllowUserToResizeColumns = False
-        Me.dgv_Country.AllowUserToResizeRows = False
-        Me.dgv_Country.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_Country.ColumnHeadersVisible = False
-        Me.dgv_Country.Dock = System.Windows.Forms.DockStyle.Top
-        Me.dgv_Country.Location = New System.Drawing.Point(0, 0)
-        Me.dgv_Country.Margin = New System.Windows.Forms.Padding(3, 3, 3, 0)
-        Me.dgv_Country.MultiSelect = False
-        Me.dgv_Country.Name = "dgv_Country"
-        Me.dgv_Country.ReadOnly = True
-        Me.dgv_Country.RowHeadersVisible = False
-        Me.dgv_Country.RowHeadersWidth = 21
-        Me.dgv_Country.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.dgv_Country.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.dgv_Country.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_Country.ShowEditingIcon = False
-        Me.dgv_Country.Size = New System.Drawing.Size(317, 440)
-        Me.dgv_Country.StandardTab = True
-        Me.dgv_Country.TabIndex = 0
+        Me.dgv_CodeNamePair.AllowUserToAddRows = False
+        Me.dgv_CodeNamePair.AllowUserToDeleteRows = False
+        Me.dgv_CodeNamePair.AllowUserToResizeColumns = False
+        Me.dgv_CodeNamePair.AllowUserToResizeRows = False
+        Me.dgv_CodeNamePair.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_CodeNamePair.ColumnHeadersVisible = False
+        Me.dgv_CodeNamePair.Dock = System.Windows.Forms.DockStyle.Top
+        Me.dgv_CodeNamePair.Location = New System.Drawing.Point(0, 0)
+        Me.dgv_CodeNamePair.Margin = New System.Windows.Forms.Padding(3, 3, 3, 0)
+        Me.dgv_CodeNamePair.MultiSelect = False
+        Me.dgv_CodeNamePair.Name = "dgv_CodeNamePair"
+        Me.dgv_CodeNamePair.ReadOnly = True
+        Me.dgv_CodeNamePair.RowHeadersVisible = False
+        Me.dgv_CodeNamePair.RowHeadersWidth = 21
+        Me.dgv_CodeNamePair.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.dgv_CodeNamePair.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.dgv_CodeNamePair.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgv_CodeNamePair.ShowEditingIcon = False
+        Me.dgv_CodeNamePair.Size = New System.Drawing.Size(317, 440)
+        Me.dgv_CodeNamePair.StandardTab = True
+        Me.dgv_CodeNamePair.TabIndex = 0
         '
         'tbnCancel
         '
@@ -74,7 +74,7 @@ Partial Class CountryForm
         Me.btnSelect.Text = "Select"
         Me.btnSelect.UseVisualStyleBackColor = True
         '
-        'CountryForm
+        'CodeNamePairForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -83,19 +83,19 @@ Partial Class CountryForm
         Me.ControlBox = False
         Me.Controls.Add(Me.btnSelect)
         Me.Controls.Add(Me.tbnCancel)
-        Me.Controls.Add(Me.dgv_Country)
+        Me.Controls.Add(Me.dgv_CodeNamePair)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "CountryForm"
-        Me.Text = "Select Country"
+        Me.Name = "CodeNamePairForm"
+        Me.Text = "Select"
         Me.TopMost = True
-        CType(Me.dgv_Country, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_CodeNamePair, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents dgv_Country As DataGridView
+    Friend WithEvents dgv_CodeNamePair As DataGridView
     Friend WithEvents tbnCancel As Button
     Friend WithEvents btnSelect As Button
 End Class

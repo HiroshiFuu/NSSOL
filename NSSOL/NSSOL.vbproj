@@ -81,10 +81,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="constantsNenum.vb" />
-    <Compile Include="CountryForm.Designer.vb">
-      <DependentUpon>CountryForm.vb</DependentUpon>
+    <Compile Include="CodeNamePairForm.Designer.vb">
+      <DependentUpon>CodeNamePairForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="CountryForm.vb">
+    <Compile Include="CodeNamePairForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.vb">
@@ -98,7 +98,7 @@
       <DependentUpon>Model_NSSOL.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\CompanyInfoDAL.vb" />
-    <Compile Include="Model\Country.vb" />
+    <Compile Include="Model\CodeNamePair.vb" />
     <Compile Include="Model\Model_NSSOL.Context.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -139,8 +139,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CountryForm.resx">
-      <DependentUpon>CountryForm.vb</DependentUpon>
+    <EmbeddedResource Include="CodeNamePairForm.resx">
+      <DependentUpon>CodeNamePairForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
@@ -175,6 +175,7 @@
     <None Include="App.config" />
     <None Include="SystemConfig.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -239,6 +240,9 @@
     <None Include="Country.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Currency.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Content Include="Model\Model_NSSOL.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

@@ -13,5 +13,6 @@
         Modified = 2
         Empty = 3
         [New] = 4
+        ModifiedNew = 5
     End Enum
 End Module
